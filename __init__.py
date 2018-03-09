@@ -43,14 +43,15 @@ class LaughSkillSkill(MycroftSkill):
             self.log.info("Laughing skill: Stopping random laugh event")
             self.random_laugh = False
             self.cancel_scheduled_event('random_laugh')
+            self.speak_dialog("cancel")
+        else:
+            self.speak_dialog("cancel_fail")
 
     def handle_laugh_event(self, message):
         # create a scheduled event to laugh at a random interval between 1
         # minute and half an hour
         if not self.random_laugh:
-            self.speak_dialog("cancel_fail")
             return
-        self.speak_dialog("cancel")
         self.log.info("Laughing skill: Handling laugh event")
         self.laugh()
         self.cancel_scheduled_event('random_laugh')
