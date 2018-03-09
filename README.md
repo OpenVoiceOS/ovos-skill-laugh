@@ -11,6 +11,7 @@ makes mycroft laugh randomly or on request
  * "Hey, Mycroft, Laugh like Alexa"
  * "Hey, Mycroft, Random Laughter"
  * "Hey, Mycroft, Evil Laugh"
+ * "Hey, Mycroft, Stop Laughing"
 
 ## Credits
 
