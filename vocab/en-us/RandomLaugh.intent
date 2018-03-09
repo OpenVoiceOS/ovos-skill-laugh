@@ -1,4 +1,3 @@
 laugh randomly
-trigger random laughing
-random laugh
-random laughter
+trigger random (laugh|laughing|laughs|laughter)
+random (laugh|laughing|laughs|laughter)
