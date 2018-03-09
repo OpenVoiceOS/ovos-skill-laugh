@@ -1,4 +1,5 @@
-from mycroft import MycroftSkill, intent_file_handler
+from mycroft import MycroftSkill, intent_file_handler, intent_handler
+from adapt.intent import IntentBuilder
 from mycroft.util import play_wav
 from os import listdir
 from os.path import join
@@ -34,7 +35,7 @@ class LaughSkillSkill(MycroftSkill):
         self.random_laugh = True
         self.handle_laugh_event(message)
 
-    @intent_file_handler("StopLaugh.intent")
+    @intent_handler(IntentBuilder('StopLaughing').require('Stop').require('Laugh'))
     def halt_laughing(self, message):
         self.log.info("Laughing skill: Stopping")
         # if in random laugh mode, cancel the scheduled event
@@ -47,7 +48,9 @@ class LaughSkillSkill(MycroftSkill):
         # create a scheduled event to laugh at a random interval between 1
         # minute and half an hour
         if not self.random_laugh:
+            self.speak_dialog("cancel_fail")
             return
+        self.speak_dialog("cancel")
         self.log.info("Laughing skill: Handling laugh event")
         self.laugh()
         self.cancel_scheduled_event('random_laugh')
@@ -57,7 +60,8 @@ class LaughSkillSkill(MycroftSkill):
                             name='random_laugh')
 
     def stop(self):
-        self.halt_laughing(None)
+        if self.random_laugh:
+            self.halt_laughing(None)
 
 
 def create_skill():
