@@ -2,7 +2,7 @@ from mycroft import MycroftSkill, intent_file_handler, intent_handler
 from adapt.intent import IntentBuilder
 from mycroft.audio import wait_while_speaking, is_speaking
 #from mycroft.skills.audioservice import AudioService
-from mycroft.util import play_wav
+from mycroft.util import play_wav, play_mp3
 from os import listdir
 from os.path import join
 import random
@@ -20,7 +20,8 @@ class LaughSkill(MycroftSkill):
     def initialize(self):
         sounds_dir = join(self.root_dir, "sounds")
         self.sounds = [join(sounds_dir, sound) for sound in
-                       listdir(sounds_dir) if ".wav" in sound]
+                       listdir(sounds_dir) if ".wav" in sound or ".mp3" in
+                       sound]
         #self.audio = AudioService(self.emitter)
         # stop laughs for speech execution
         self.emitter.on("speak", self.stop_laugh)
@@ -29,8 +30,12 @@ class LaughSkill(MycroftSkill):
         # dont laugh over a speech message
         if is_speaking():
             wait_while_speaking()
-        #self.audio.play(random.choice(self.sounds))
-        self.p = play_wav(random.choice(self.sounds))
+        sound = random.choice(self.sounds)
+        if ".mp3" in sound:
+            self.p = play_mp3(sound)
+        else:
+            self.p = play_wav(sound)
+        # self.audio.play(sound)
 
     @intent_file_handler("Laugh.intent")
     def handle_laugh_intent(self, message):
