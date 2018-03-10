@@ -1,7 +1,8 @@
 from mycroft import MycroftSkill, intent_file_handler, intent_handler
 from adapt.intent import IntentBuilder
-from mycroft.audio import wait_while_speaking, is_speaking, stop_speaking
-from mycroft.skills.audioservice import AudioService
+from mycroft.audio import wait_while_speaking, is_speaking
+#from mycroft.skills.audioservice import AudioService
+from mycroft.util import play_wav
 from os import listdir
 from os.path import join
 import random
@@ -14,12 +15,13 @@ class LaughSkill(MycroftSkill):
         self.random_laugh = False
         self.sounds = []
         self.audio = None
+        self.p = None
 
     def initialize(self):
         sounds_dir = join(self.root_dir, "sounds")
         self.sounds = [join(sounds_dir, sound) for sound in
-                       listdir(sounds_dir)]
-        self.audio = AudioService(self.emitter)
+                       listdir(sounds_dir) if ".wav" in sound]
+        #self.audio = AudioService(self.emitter)
         # stop laughs for speech execution
         self.emitter.on("speak", self.stop_laugh)
 
@@ -27,7 +29,8 @@ class LaughSkill(MycroftSkill):
         # dont laugh over a speech message
         if is_speaking():
             wait_while_speaking()
-        self.audio.play(random.choice(self.sounds))
+        #self.audio.play(random.choice(self.sounds))
+        self.p = play_wav(random.choice(self.sounds))
 
     @intent_file_handler("Laugh.intent")
     def handle_laugh_intent(self, message):
@@ -66,13 +69,15 @@ class LaughSkill(MycroftSkill):
                             name='random_laugh')
 
     def stop_laugh(self):
-        playing_info = self.audio.track_info()
+        #playing_info = self.audio.track_info()
         # TODO most audio backends dont provide the info we need, make a PR
         #  to get sound file path
-        paths = []
-        for path in paths:
-            if path in self.sounds:
-                stop_speaking()
+        #paths = []
+        #for path in paths:
+        #    if path in self.sounds:
+        #        self.audio.stop()
+        if self.p is not None:
+            self.p.terminate()
 
     def stop(self):
         # abort current laugh
