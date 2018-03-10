@@ -1,6 +1,7 @@
 from mycroft import MycroftSkill, intent_file_handler, intent_handler
 from adapt.intent import IntentBuilder
-from mycroft.util import play_wav
+from mycroft.audio import wait_while_speaking, is_speaking
+from mycroft.skills.audioservice import AudioService
 from os import listdir
 from os.path import join
 import random
@@ -12,16 +13,18 @@ class LaughSkillSkill(MycroftSkill):
         MycroftSkill.__init__(self)
         self.random_laugh = False
         self.sounds = []
+        self.audio = None
 
     def initialize(self):
         sounds_dir = join(self.root_dir, "sounds")
         self.sounds = [join(sounds_dir, sound) for sound in
-                       listdir(sounds_dir) if ".wav" in sound]
+                       listdir(sounds_dir)]
+        self.audio = AudioService(self.emitter)
 
     def laugh(self):
-        # TODO should i use audio service instead? supports more sound file
-        #  types
-        play_wav(random.choice(self.sounds))
+        if is_speaking():
+            wait_while_speaking()
+        self.audio.play(random.choice(self.sounds))
 
     @intent_file_handler("Laugh.intent")
     def handle_laugh_intent(self, message):
