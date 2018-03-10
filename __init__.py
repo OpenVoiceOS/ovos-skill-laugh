@@ -1,6 +1,6 @@
 from mycroft import MycroftSkill, intent_file_handler, intent_handler
 from adapt.intent import IntentBuilder
-from mycroft.audio import wait_while_speaking, is_speaking
+from mycroft.audio import wait_while_speaking, is_speaking, stop_speaking
 from mycroft.skills.audioservice import AudioService
 from os import listdir
 from os.path import join
@@ -8,7 +8,7 @@ import random
 from datetime import timedelta, datetime
 
 
-class LaughSkillSkill(MycroftSkill):
+class LaughSkill(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
         self.random_laugh = False
@@ -20,8 +20,11 @@ class LaughSkillSkill(MycroftSkill):
         self.sounds = [join(sounds_dir, sound) for sound in
                        listdir(sounds_dir)]
         self.audio = AudioService(self.emitter)
+        # stop laughs for speech execution
+        self.emitter.on("speak", self.stop_laugh)
 
     def laugh(self):
+        # dont laugh over a speech message
         if is_speaking():
             wait_while_speaking()
         self.audio.play(random.choice(self.sounds))
@@ -62,11 +65,28 @@ class LaughSkillSkill(MycroftSkill):
                                 seconds=random.randrange(60, 1800)),
                             name='random_laugh')
 
+    def stop_laugh(self):
+        playing_info = self.audio.track_info()
+        # TODO most audio backends dont provide the info we need, make a PR
+        #  to get sound file path
+        paths = []
+        for path in paths:
+            if path in self.sounds:
+                stop_speaking()
+
     def stop(self):
+        # abort current laugh
+        self.stop_laugh()
+        # stop random laughs
         if self.random_laugh:
             self.halt_laughing(None)
 
+    def shutdown(self):
+        # remove speak listener
+        self.emitter.remove("speak", self.stop_laugh)
+        super(LaughSkill, self).shutdown()
+
 
 def create_skill():
-    return LaughSkillSkill()
+    return LaughSkill()
 
