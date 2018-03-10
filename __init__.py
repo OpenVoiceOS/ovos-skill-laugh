@@ -4,7 +4,6 @@ from mycroft.util import play_wav
 from os import listdir
 from os.path import join
 import random
-import datetime
 from datetime import timedelta, datetime
 
 
