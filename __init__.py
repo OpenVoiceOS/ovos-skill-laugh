@@ -3,7 +3,7 @@ from adapt.intent import IntentBuilder
 from mycroft.audio import wait_while_speaking, is_speaking
 from mycroft.util import play_wav, play_mp3
 from os import listdir
-from os.path import join
+from os.path import join, dirname
 import random
 from datetime import timedelta, datetime
 
@@ -16,7 +16,7 @@ class LaughSkill(MycroftSkill):
         if "gender" not in self.settings:
             self.settings["gender"] = "male"
         if "sounds_dir" not in self.settings:
-            self.settings["sounds_dir"] = join(self.root_dir, "sounds")
+            self.settings["sounds_dir"] = join(dirname(__file__), "sounds")
         self.p = None
         self.settings.set_changed_callback(self._fix_gender)
 
@@ -37,7 +37,7 @@ class LaughSkill(MycroftSkill):
                                ".wav" in sound or ".mp3" in sound]
 
         # stop laughs for speech execution
-        self.emitter.on("speak", self.stop_laugh)
+        self.add_event("speak", self.stop_laugh)
 
     def laugh(self):
         # dont laugh over a speech message
