@@ -1,7 +1,6 @@
 from mycroft import MycroftSkill, intent_file_handler, intent_handler
 from adapt.intent import IntentBuilder
 from mycroft.audio import wait_while_speaking, is_speaking
-#from mycroft.skills.audioservice import AudioService
 from mycroft.util import play_wav, play_mp3
 from os import listdir
 from os.path import join
@@ -13,16 +12,30 @@ class LaughSkill(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
         self.random_laugh = False
-        self.sounds = []
-        self.audio = None
+        self.sounds = {"male": [], "female": []}
+        if "gender" not in self.settings:
+            self.settings["gender"] = "male"
+        if "sounds_dir" not in self.settings:
+            self.settings["sounds_dir"] = join(self.root_dir, "sounds")
         self.p = None
+        self.settings.set_changed_callback(self._fix_gender)
+
+    def _fix_gender(self):
+        if "f" in self.settings["gender"].lower():
+            self.settings["gender"] = "female"
+        else:
+            self.settings["gender"] = "male"
 
     def initialize(self):
-        sounds_dir = join(self.root_dir, "sounds")
-        self.sounds = [join(sounds_dir, sound) for sound in
+        sounds_dir = join(self.settings["sounds_dir"], "male")
+        self.sounds["male"] = [join(sounds_dir, sound) for sound in
                        listdir(sounds_dir) if ".wav" in sound or ".mp3" in
                        sound]
-        #self.audio = AudioService(self.emitter)
+        sounds_dir = join(self.settings["sounds_dir"], "female")
+        self.sounds["female"] = [join(sounds_dir, sound) for sound in
+                               listdir(sounds_dir) if
+                               ".wav" in sound or ".mp3" in sound]
+
         # stop laughs for speech execution
         self.emitter.on("speak", self.stop_laugh)
 
@@ -30,12 +43,12 @@ class LaughSkill(MycroftSkill):
         # dont laugh over a speech message
         if is_speaking():
             wait_while_speaking()
-        sound = random.choice(self.sounds)
+
+        sound = random.choice(self.sounds[self.settings["gender"]])
         if ".mp3" in sound:
             self.p = play_mp3(sound)
         else:
             self.p = play_wav(sound)
-        # self.audio.play(sound)
 
     @intent_file_handler("Laugh.intent")
     def handle_laugh_intent(self, message):
@@ -74,13 +87,6 @@ class LaughSkill(MycroftSkill):
                             name='random_laugh')
 
     def stop_laugh(self):
-        #playing_info = self.audio.track_info()
-        # TODO most audio backends dont provide the info we need, make a PR
-        #  to get sound file path
-        #paths = []
-        #for path in paths:
-        #    if path in self.sounds:
-        #        self.audio.stop()
         if self.p is not None:
             self.p.terminate()
 

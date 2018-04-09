@@ -1,0 +1,22 @@
+{
+    "name": "Laugh Skill",
+    "skillMetadata": {
+        "sections": [
+            {
+                "name": "Sounds Configuration",
+                "fields": [
+                    {
+                        "type": "label",
+                        "label": "Choose the gender of your laugh sounds, valid values are 'male' and 'female' "
+                    },
+                    {
+                        "name": "gender",
+                        "type": "text",
+                        "label": "gender",
+                        "value": "male"
+                    }
+                ]
+            }
+        ]
+    }
+}

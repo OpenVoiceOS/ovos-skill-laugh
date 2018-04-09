@@ -4,7 +4,7 @@ makes Mycroft laugh ( randomly ) like a maniac
 
 ## Description
 
-makes mycroft laugh randomly or on request
+makes mycroft laugh randomly or on request, gender configurable
 
 ## Examples
 
@@ -17,4 +17,6 @@ makes mycroft laugh randomly or on request
 
 JarbasAI
 
-Sounds from [SoundBible](http://soundbible.com/suggest.php?q=laugh&x=0&y=0)
+Male sounds from [SoundBible](http://soundbible.com/suggest.php?q=laugh&x=0&y=0)
+
+Female sounds from [FreeSound](https://freesound.org/search/?q=female+evil+laugh)
