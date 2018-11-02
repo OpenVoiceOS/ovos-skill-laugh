@@ -89,13 +89,17 @@ class LaughSkill(MycroftSkill):
     def stop_laugh(self):
         if self.p is not None:
             self.p.terminate()
+            return True
+        return False
 
     def stop(self):
         # abort current laugh
-        self.stop_laugh()
+        stopped = self.stop_laugh()
         # stop random laughs
         if self.random_laugh:
             self.halt_laughing(None)
+            stopped = True
+        return stopped
 
     def shutdown(self):
         # remove speak listener
