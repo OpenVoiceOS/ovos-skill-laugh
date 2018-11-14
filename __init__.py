@@ -101,11 +101,6 @@ class LaughSkill(MycroftSkill):
             stopped = True
         return stopped
 
-    def shutdown(self):
-        # remove speak listener
-        self.emitter.remove("speak", self.stop_laugh)
-        super(LaughSkill, self).shutdown()
-
 
 def create_skill():
     return LaughSkill()
