@@ -1,4 +1,4 @@
-# <img src='https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid//laugh.svg' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> Laugh
+# <img src='https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/laugh.svg' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> Laugh
 Makes Mycroft laugh like a maniac
 
 ## About
