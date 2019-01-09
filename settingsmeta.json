@@ -7,7 +7,7 @@
                 "fields": [
                     {
                         "type": "label",
-                        "label": "Choose the gender of your laugh sounds, valid values are 'male' and 'female' "
+                        "label": "Choose the gender of your laugh sounds, valid values are 'male', 'female' and 'robot'"
                     },
                     {
                         "name": "gender",

@@ -1,25 +1,20 @@
 """
 skill laugh
-Copyright (C) 2018  Andreas Lorensen
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+Copyright (C) 2018 JarbasAI
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 """
 
 from mycroft import MycroftSkill, intent_file_handler, intent_handler
 from adapt.intent import IntentBuilder
 from mycroft.audio import wait_while_speaking, is_speaking
-from mycroft.util import play_wav, play_mp3
+from mycroft.util import play_wav, play_mp3, play_ogg
 from os import listdir
 from os.path import join, dirname
 import random
@@ -41,8 +36,10 @@ class LaughSkill(MycroftSkill):
     def _fix_gender(self):
         if "f" in self.settings["gender"].lower():
             self.settings["gender"] = "female"
-        else:
+        elif "m" in self.settings["gender"].lower():
             self.settings["gender"] = "male"
+        else:
+            self.settings["gender"] = "robot"
 
     def initialize(self):
         sounds_dir = join(self.settings["sounds_dir"], "male")
@@ -53,7 +50,10 @@ class LaughSkill(MycroftSkill):
         self.sounds["female"] = [join(sounds_dir, sound) for sound in
                                listdir(sounds_dir) if
                                ".wav" in sound or ".mp3" in sound]
-
+        sounds_dir = join(self.settings["sounds_dir"], "robot")
+        self.sounds["robot"] = [join(sounds_dir, sound) for sound in
+                                 listdir(sounds_dir) if
+                                 ".wav" in sound or ".mp3" in sound]
         # stop laughs for speech execution
         self.add_event("speak", self.stop_laugh)
 
@@ -65,6 +65,8 @@ class LaughSkill(MycroftSkill):
         sound = random.choice(self.sounds[self.settings["gender"]])
         if ".mp3" in sound:
             self.p = play_mp3(sound)
+        elif ".ogg" in sound:
+            self.p = play_ogg(sound)
         else:
             self.p = play_wav(sound)
 

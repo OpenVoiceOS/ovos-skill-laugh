@@ -12,6 +12,7 @@ Laugh randomly or when requested, gender configurable on home.mycroft.ai
 
 ## Credits
 [@JarbasAl](https://jarbasal.github.io)
+[@Andlo](https://github.com/andlo)
 [SoundBible](http://soundbible.com/suggest.php?q=laugh&x=0&y=0)
 [FreeSound](https://freesound.org/search/?q=female+evil+laugh)
 
