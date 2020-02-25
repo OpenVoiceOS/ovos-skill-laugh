@@ -43,7 +43,7 @@ class LaughSkill(MycroftSkill):
         if "sounds_dir" not in self.settings:
             self.settings["sounds_dir"] = join(dirname(__file__), "sounds")
         self.p = None
-        self.settings.set_changed_callback(self._fix_gender)
+        self.settings_change_callback = self._fix_gender
 
     def _fix_gender(self):
         if "f" in self.settings["gender"].lower():
