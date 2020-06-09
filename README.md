@@ -2,6 +2,8 @@
 
 Makes Mycroft laugh like a maniac
 
+![](./sshot.png)
+
 ## About
 Laugh randomly or when requested, gender configurable on home.mycroft.ai
 
