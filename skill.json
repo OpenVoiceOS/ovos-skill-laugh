@@ -1,0 +1,21 @@
+{
+  "name": "Evil Laugh Skill",
+  "skillname": "skill-laugh",
+  "authorname": "JarbasSkills",
+  "foldername": "",
+  "url": "https://github.com/JarbasSkills/skill-laugh",
+  "branch": "master",
+  "desktopFile": true,
+  "warning": "",
+  "systemDeps": "false",
+  "platforms": [
+    "arm",
+    "arm64",
+    "i386",
+    "x86_64",
+    "ia64"
+  ],
+  "examples": [
+    "evil laugh"
+  ]
+}
