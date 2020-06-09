@@ -5,7 +5,7 @@
   "foldername": "",
   "url": "https://github.com/JarbasSkills/skill-laugh",
   "branch": "master",
-  "desktopFile": true,
+  "desktopFile": false,
   "warning": "",
   "systemDeps": "false",
   "platforms": [
