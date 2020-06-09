@@ -50,9 +50,17 @@ class LaughSkill(MycroftSkill):
         self.add_event('skill-laugh.jarbasskills.home',
                        self.homepage)
 
-        if self.settings["haunted"]:
+        if self.settings["haunted"] or self.special_day():
             self.random_laugh = True
             self.handle_laugh_event(None)
+
+    def special_day(self):
+        today = datetime.today()
+        if today.day == 13 and today.weekday() == 4:
+            return True  # friday the 13th
+        if today.day == 31 and today.month == 10:
+            return True  # halloween
+        return False
 
     def homepage(self):
         caption = "A skill by Jarbas AI"
@@ -76,12 +84,20 @@ class LaughSkill(MycroftSkill):
         self.gui.show_image(join(dirname(__file__), "ui", "images",
                                  str(pic) + ".jpg"))
         if ".mp3" in sound:
-            self.p = play_mp3(sound).wait()
+            self.p = play_mp3(sound)
         elif ".ogg" in sound:
-            self.p = play_ogg(sound).wait()
+            self.p = play_ogg(sound)
         else:
-            self.p = play_wav(sound).wait()
+            self.p = play_wav(sound)
+        self.p.wait()
         self.gui.clear()
+
+    @intent_file_handler("haunted.intent")
+    def handle_haunted_intent(self, message):
+        if self.settings["haunted"]:
+            self.speak_dialog("yes")
+        else:
+            self.speak_dialog("maybe")
 
     @intent_file_handler("Laugh.intent")
     def handle_laugh_intent(self, message):
@@ -99,7 +115,7 @@ class LaughSkill(MycroftSkill):
     def halt_laughing(self, message):
         self.log.info("Laughing skill: Stopping")
         # if in random laugh mode, cancel the scheduled event
-        if self.random_laugh:
+        if self.random_laugh and not self.special_day():
             self.log.info("Laughing skill: Stopping random laugh event")
             self.random_laugh = False
             self.cancel_scheduled_event('random_laugh')
@@ -118,7 +134,7 @@ class LaughSkill(MycroftSkill):
         self.cancel_scheduled_event('random_laugh')
         self.schedule_event(self.handle_laugh_event,
                             datetime.now() + timedelta(
-                                seconds=random.randrange(60, 1800)),
+                                seconds=random.randrange(200, 10800)),
                             name='random_laugh')
 
     def stop_laugh(self):
