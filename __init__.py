@@ -45,10 +45,7 @@ class LaughSkill(MycroftSkill):
                                 listdir(sounds_dir) if
                                 ".wav" in sound or ".mp3" in sound]
         # stop laughs for speech execution
-        self.add_event("speak", self.stop_laugh)
-
-        self.add_event('skill-laugh.jarbasskills.home',
-                       self.homepage)
+        self.add_event("speak", self.stop)
 
         if self.settings["haunted"] or self.special_day():
             self.random_laugh = True
@@ -61,16 +58,6 @@ class LaughSkill(MycroftSkill):
         if today.day == 31 and today.month == 10:
             return True  # halloween
         return False
-
-    def homepage(self):
-        caption = "A skill by Jarbas AI"
-        if self.settings["haunted"]:
-            caption = "Your hardware is haunted"
-        self.gui.clear()
-        self.gui.show_image(join(dirname(__file__), "ui", "images",
-                                 "jurassic_jarbas.png"),
-                            caption=caption,
-                            fill='PreserveAspectFit')
 
     def laugh(self):
         # dont laugh over a speech message
@@ -137,22 +124,11 @@ class LaughSkill(MycroftSkill):
                                 seconds=random.randrange(200, 10800)),
                             name='random_laugh')
 
-    def stop_laugh(self):
+    def stop(self, message=None):
         if self.p is not None:
             self.p.terminate()
             return True
         return False
-
-    def stop(self):
-        # abort current laugh
-        stopped = self.stop_laugh()
-        # stop random laughs
-        if self.random_laugh:
-            self.halt_laughing(None)
-            stopped = True
-        if stopped:
-            self.gui.clear()
-        return stopped
 
 
 def create_skill():

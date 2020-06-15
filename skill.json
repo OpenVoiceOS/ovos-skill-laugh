@@ -7,7 +7,7 @@
   "branch": "master",
   "desktopFile": false,
   "warning": "",
-  "systemDeps": "false",
+  "systemDeps": false,
   "platforms": [
     "arm",
     "arm64",
