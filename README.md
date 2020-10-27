@@ -1,17 +1,17 @@
-# <img src='https://raw.githack.com/FortAwesome/Font-Awesome/master/svgs/solid/laugh.svg' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> Laugh
+# <img src='./res/icon/laugh_icon.png' card_color='#40DBB0' width='50' height='50' style='vertical-align:bottom'/> Laugh
 
 Makes Mycroft laugh like a maniac
 
 ![](./sshot.png)
 
 ## About
+
 Laugh randomly or when requested, gender configurable on home.mycroft.ai
 
 
 ## Examples
 * "Laugh like Alexa"
-* "Random laughter"
-* "do the evil laugh"
+* "can you laugh"
 
 ## Credits
 [@JarbasAl](https://jarbasal.github.io)

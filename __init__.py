@@ -10,7 +10,7 @@ from datetime import timedelta, datetime
 
 class LaughSkill(MycroftSkill):
     def __init__(self):
-        MycroftSkill.__init__(self)
+        super().__init__()
         self.random_laugh = False
         self.sounds = {"male": [], "female": []}
         if "haunted" not in self.settings:
@@ -50,6 +50,12 @@ class LaughSkill(MycroftSkill):
         if self.settings["haunted"] or self.special_day():
             self.random_laugh = True
             self.handle_laugh_event(None)
+
+        self.add_event('skill-laugh.jarbasskills.home',
+                       self.handle_homescreen)
+
+    def handle_homescreen(self, message):
+        self.laugh()
 
     def special_day(self):
         today = datetime.today()
