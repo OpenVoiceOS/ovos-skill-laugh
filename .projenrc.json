@@ -1,5 +1,0 @@
-{
-  "type": "@mikejgray/ovos-skill-projen.OVOSSkillProject",
-  "name": "skill-laugh",
-  "retrofit": true
-}

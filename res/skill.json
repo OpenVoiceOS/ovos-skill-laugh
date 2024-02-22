@@ -1,9 +1,9 @@
 {
   "name": "Evil Laugh Skill",
   "skillname": "skill-laugh",
-  "authorname": "JarbasSkills",
+  "authorname": "OpenVoiceOS",
   "foldername": "",
-  "url": "https://github.com/JarbasSkills/skill-laugh",
+  "url": "https://github.com/OpenVoiceOS/skill-laugh",
   "branch": "master",
   "desktopFile": true,
   "warning": "",
