@@ -1,14 +1,23 @@
-from mycroft import MycroftSkill, intent_file_handler, intent_handler
-from adapt.intent import IntentBuilder
-from mycroft.audio import wait_while_speaking, is_speaking
-from mycroft.util import play_wav, play_mp3, play_ogg
+# TODO: Remove unused OVOS imports
+from ovos_workshop.decorators import intent_handler
+from ovos_workshop.skills import OVOSSkill
+from ovos_utils.intents import IntentBuilder
+from ovos_bus_client.message import Message
+# TODO: Remove all Mycroft imports
+# from mycroft import MycroftSkill, intent_file_handler, intent_handler
+# TODO: Replace Adapt IntentBuilder import
+# from adapt.intent import IntentBuilder
+# TODO: Remove all Mycroft imports
+# from mycroft.audio import wait_while_speaking, is_speaking
+# TODO: Remove all Mycroft imports
+# from mycroft.util import play_wav, play_mp3, play_ogg
 from os import listdir
 from os.path import join, dirname
 import random
 from datetime import timedelta, datetime
 
 
-class LaughSkill(MycroftSkill):
+class LaughSkill(OVOSSkill):
     def __init__(self):
         super().__init__()
         self.random_laugh = False
@@ -137,5 +146,6 @@ class LaughSkill(MycroftSkill):
         return False
 
 
+# TODO: Remove create_skill() function
 def create_skill():
     return LaughSkill()
