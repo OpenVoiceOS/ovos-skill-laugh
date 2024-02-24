@@ -70,7 +70,7 @@ class LaughSkill(OVOSSkill):
             self.random_laugh = True
             self.handle_laugh_event(None)
 
-        self.add_event('skill-laugh.jarbasskills.home',
+        self.add_event('skill-laugh.openvoiceos.home',
                        self.handle_homescreen)
 
     def handle_homescreen(self, message: Message):
