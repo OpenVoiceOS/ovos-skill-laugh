@@ -1,14 +1,14 @@
 {
     "title": "Laugh",
-    "url": "https://github.com/OpenVoiceOS/skill-laugh",
-    "summary": "Makes Mycroft laugh like a maniac ![](./sshot.png)",
-    "short_description": "Makes Mycroft laugh like a maniac ![](./sshot.png)",
-    "description": "Laugh randomly or when requested, gender configurable in settings.json",
+    "url": "https://github.com/mikejgray/skill-laugh",
+    "summary": "![Python](https://img.shields.io/badge/python-3.8-blue.svg) ![Python](https://img.shields.io/badge/python-3.9-blue.svg) ![Python](https://img.shields.io/badge/python-3.10-blue.svg) ![Python](https://img.shields.io/badge/python-3.11-blue.svg) Makes your voice assistant laugh like a maniac ![A ghostly face, laughing evilly.](./sshot.png)",
+    "short_description": "![Python](https://img.shields.io/badge/python-3.8-blue.svg) ![Python](https://img.shields.io/badge/python-3.9-blue.svg) ![Python](https://img.shields.io/badge/python-3.10-blue.svg) ![Python](https://img.shields.io/badge/python-3.11-blue.svg) Makes your voice assistant laugh like a maniac ![A ghostly face, laughing evilly.](./sshot.png)",
+    "description": "Laugh randomly or when requested.",
     "examples": [
         "Laugh like Alexa",
         "can you laugh"
     ],
-    "desktopFile": true,
+    "desktopFile": false,
     "warning": "",
     "systemDeps": false,
     "requirements": {
@@ -23,11 +23,11 @@
     },
     "incompatible_skills": [],
     "platforms": [
-        "arm",
-        "arm64",
         "i386",
         "x86_64",
-        "ia64"
+        "ia64",
+        "arm64",
+        "arm"
     ],
     "branch": "master",
     "license": "Unknown",
@@ -49,8 +49,7 @@
         "- [FreeSound](https://freesound.org/search/?q=female+evil+laugh)"
     ],
     "skillname": "skill-laugh",
-    "authorname": "OpenVoiceOS",
+    "authorname": "mikejgray",
     "foldername": null,
-    "name": "Evil Laugh Skill",
-    "settings": "~/.config/ovos/skills/skill-laugh.openvoiceos/settings.json ~/.config/neon/skills/skill-laugh.openvoiceos/settings.json ```json {   \"gender\": \"robot\", // or \"male\" or \"female\"   \"haunted\": false, // default true, mine is an evil laugh   \"sounds_dir\": \"/home/neon/venv/lib/python3.10/site-packages/skill_laugh/sounds\", // default on a Neon setup, can be set to anything OVOS/Neon can access   \"__mycroft_skill_firstrun\": false } ```"
+    "settings": "~/.config/ovos/skills/skill-laugh.openvoiceos/settings.json ~/.config/neon/skills/skill-laugh.openvoiceos/settings.json ```json {   \"gender\": \"robot\", // or \"male\" or \"female\"   \"haunted\": false, // default true, \"mine is an evil laugh\"   \"sounds_dir\": \"/home/neon/venv/lib/python3.10/site-packages/skill_laugh/sounds\", // default on a Neon setup, can be set to anything OVOS/Neon can access   \"__mycroft_skill_firstrun\": false } ```"
 }
