@@ -3,11 +3,9 @@
 import random
 from datetime import datetime, timedelta
 from os import listdir
-from os.path import dirname, join, isdir
+from os.path import dirname, isdir, join
 from typing import Literal, Optional
-from unittest.mock import MagicMock
 
-from ovos_bus_client.apis.gui import GUIInterface
 from ovos_bus_client.message import Message
 from ovos_workshop.decorators import intent_handler
 from ovos_workshop.intents import IntentBuilder
@@ -67,7 +65,8 @@ class LaughSkill(OVOSSkill):
             sounds_dir = join(self.sounds_dir, gender)
             if isdir(sounds_dir):  # Ensure the directory exists
                 self.sounds[gender] = [
-                    join(sounds_dir, sound) for sound in listdir(sounds_dir)
+                    join(sounds_dir, sound)
+                    for sound in listdir(sounds_dir)
                     if sound.endswith((".wav", ".mp3"))
                 ]
             else:
@@ -80,11 +79,6 @@ class LaughSkill(OVOSSkill):
             self.handle_laugh_event(None)
 
         self.add_event("skill-laugh.openvoiceos.home", self.handle_homescreen)
-
-        # There is an edge case where no GUI is available, and this will help identify those edge cases
-        if not self.gui:
-            self.log.warning("No GUI is available! Creating a mock GUI interface.")
-            self.gui = MagicMock(GUIInterface)
 
     def handle_homescreen(self, message: Message) -> None:  # noqa
         """Handle the homescreen event."""
@@ -155,13 +149,3 @@ class LaughSkill(OVOSSkill):
             datetime.now() + timedelta(seconds=random.randrange(200, 10800)),
             name="random_laugh",
         )
-
-    def stop(self, message: Message) -> Literal[True]:  # noqa
-        """Stop the audio."""
-        self.send_stop_signal("mycroft.audio.service.stop")
-        return True
-
-    def shutdown(self) -> None:
-        if isinstance(self.gui, MagicMock):
-            self.log.warning("No GUI was available!")
-        return super().shutdown()

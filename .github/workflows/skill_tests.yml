@@ -21,4 +21,3 @@ jobs:
       python_matrix: '[3.9, "3.10", "3.11"]'
       is_skill: true
       upload_coverage: true
-      pip_install_dirs: '["."]'
