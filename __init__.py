@@ -1,68 +1,77 @@
+# pylint: disable=invalid-name,attribute-defined-outside-init,unused-argument,arguments-differ
+"""Make your voice assistant laugh evilly. Beware... it might be haunted!"""
 import random
 from datetime import datetime, timedelta
 from os import listdir
-from os.path import dirname, join
+from os.path import dirname, join, isdir
+from typing import Literal, Optional
+from unittest.mock import MagicMock
 
-from ovos_audio.utils import is_speaking, wait_while_speaking
+from ovos_bus_client.apis.gui import GUIInterface
 from ovos_bus_client.message import Message
-from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.decorators import intent_handler
+from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 
 
 class LaughSkill(OVOSSkill):
+    """Make your voice assistant laugh evilly. Beware... it might be haunted!"""
+
     @property
-    def sounds_dir(self):
+    def sounds_dir(self) -> str:
+        """Path to the sounds directory."""
+        default = join(dirname(__file__), "sounds")
         if not self.settings.get("sounds_dir"):
-            self.sounds_dir = join(dirname(__file__), "sounds")
-        return self.settings.get("sounds_dir")
+            self.sounds_dir = default
+        return self.settings.get("sounds_dir", default)
 
     @property
-    def haunted(self):
-        if not self.settings.get("haunted"):
-            self.haunted = True
-        return self.settings.get("haunted")
+    def haunted(self) -> bool:
+        """Is the voice assistant haunted? By default, it will not be."""
+        # Directly return the value from settings, defaulting to True if not set
+        return self.settings.get("haunted", True)
 
     @property
-    def gender(self):
-        if not self.settings.get("gender"):
-            self.gender = "male"
-        if "f" in self.settings.get("gender"):
-            self.gender = "female"
-        if self.settings.get("gender").startswith("m"):
-            self.gender = "male"
-        else:
-            self.gender = "robot"
-        return self.settings.get("gender")
+    def gender(self) -> Literal["male", "robot", "female"]:
+        """The gender of the ghost in the machine."""
+        gender_from_settings = self.settings.get("gender", "robot")
+        # Simplified logic
+        if gender_from_settings.startswith("f"):
+            return "female"
+        elif gender_from_settings.startswith("m"):
+            return "male"
+        return "robot"  # Default and fallback
 
     @gender.setter
-    def gender(self, value):
+    def gender(self, value: str) -> None:
+        """Setter for gender property."""
         self.settings["gender"] = value
 
     @haunted.setter
-    def haunted(self, value):
+    def haunted(self, value) -> None:
+        """Setter for haunted property."""
         self.settings["haunted"] = value
 
     @sounds_dir.setter
-    def sounds_dir(self, value):
+    def sounds_dir(self, value) -> None:
+        """Setter for sounds_dir property."""
         self.settings["sounds_dir"] = value
 
-    def initialize(self):
+    def initialize(self) -> None:
+        """Initialize the skill."""
         self.random_laugh = False
         self.sounds = {"male": [], "female": [], "robot": []}
-        sounds_dir = join(self.sounds_dir, "male")
-        self.sounds["male"] = [join(sounds_dir, sound) for sound in
-                               listdir(sounds_dir) if
-                               ".wav" in sound or ".mp3" in
-                               sound]
-        sounds_dir = join(self.sounds_dir, "female")
-        self.sounds["female"] = [join(sounds_dir, sound) for sound in
-                                 listdir(sounds_dir) if
-                                 ".wav" in sound or ".mp3" in sound]
-        sounds_dir = join(self.sounds_dir, "robot")
-        self.sounds["robot"] = [join(sounds_dir, sound) for sound in
-                                listdir(sounds_dir) if
-                                ".wav" in sound or ".mp3" in sound]
+
+        # Example adjustment: Verifying sound directories exist before populating `sounds`
+        for gender in ["male", "female", "robot"]:
+            sounds_dir = join(self.sounds_dir, gender)
+            if isdir(sounds_dir):  # Ensure the directory exists
+                self.sounds[gender] = [
+                    join(sounds_dir, sound) for sound in listdir(sounds_dir)
+                    if sound.endswith((".wav", ".mp3"))
+                ]
+            else:
+                self.log.warning("Sounds directory does not exist: %s", sounds_dir)
         # stop laughs for speech execution
         self.add_event("speak", self.stop)
 
@@ -70,13 +79,19 @@ class LaughSkill(OVOSSkill):
             self.random_laugh = True
             self.handle_laugh_event(None)
 
-        self.add_event('skill-laugh.openvoiceos.home',
-                       self.handle_homescreen)
+        self.add_event("skill-laugh.openvoiceos.home", self.handle_homescreen)
 
-    def handle_homescreen(self, message: Message):
+        # There is an edge case where no GUI is available, and this will help identify those edge cases
+        if not self.gui:
+            self.log.warning("No GUI is available! Creating a mock GUI interface.")
+            self.gui = MagicMock(GUIInterface)
+
+    def handle_homescreen(self, message: Message) -> None:  # noqa
+        """Handle the homescreen event."""
         self.laugh()
 
     def special_day(self):
+        """Check if today is a special day for spirits."""
         today = datetime.today()
         if today.day == 13 and today.weekday() == 4:
             return True  # friday the 13th
@@ -85,64 +100,68 @@ class LaughSkill(OVOSSkill):
         return False
 
     def laugh(self):
-        # dont laugh over a speech message
-        if is_speaking():
-            wait_while_speaking()
-
+        """Make the voice assistant laugh."""
         sound = random.choice(self.sounds[self.gender])
 
         self.gui.clear()
         pic = random.randint(0, 3)
-        self.gui.show_image(join(dirname(__file__), "ui", "images",
-                                 str(pic) + ".jpg"))
+        self.gui.show_image(join(dirname(__file__), "ui", "images", str(pic) + ".jpg"))
         self.play_audio(sound)
         self.gui.clear()
 
     @intent_handler("haunted.intent")
-    def handle_haunted_intent(self, message: Message):
+    def handle_haunted_intent(self, message: Message) -> None:
+        """Handle the haunted intent."""
         if self.haunted:
             self.speak_dialog("yes")
         else:
             self.speak_dialog("maybe")
 
     @intent_handler("Laugh.intent")
-    def handle_laugh_intent(self, message: Message):
+    def handle_laugh_intent(self, message: Message) -> None:  # noqa
+        """Handle the laugh intent."""
         self.laugh()
 
     @intent_handler("RandomLaugh.intent")
-    def handle_random_intent(self, message: Message):
-        # initiate random laughing
+    def handle_random_intent(self, message: Message) -> None:  # noqa
+        """Initiate random laughing."""
         self.log.info("Laughing skill: Triggering random laughing")
         self.random_laugh = True
         self.handle_laugh_event(message)
 
-    @intent_handler(
-        IntentBuilder('StopLaughing').require('Stop').require('Laugh'))
-    def halt_laughing(self, message: Message):
+    @intent_handler(IntentBuilder("StopLaughing").require("Stop").require("Laugh"))
+    def halt_laughing(self, message: Message) -> None:
+        """Stop the random laughing."""
         self.log.info("Laughing skill: Stopping")
         # if in random laugh mode, cancel the scheduled event
         if self.random_laugh and not self.special_day():
             self.log.info("Laughing skill: Stopping random laugh event")
             self.random_laugh = False
-            self.cancel_scheduled_event('random_laugh')
+            self.cancel_scheduled_event("random_laugh")
             self.speak_dialog("cancel")
             # if haunted == True it will be back on reboot ;)
         else:
             self.speak_dialog("cancel_fail")
 
-    def handle_laugh_event(self, message: Message):
-        # create a scheduled event to laugh at a random interval between 1
-        # minute and half an hour
+    def handle_laugh_event(self, message: Optional[Message]) -> None:
+        """Create a scheduled event for random laughing."""
         if not self.random_laugh:
             return
         self.log.info("Laughing skill: Handling laugh event")
         self.laugh()
-        self.cancel_scheduled_event('random_laugh')
-        self.schedule_event(self.handle_laugh_event,
-                            datetime.now() + timedelta(
-                                seconds=random.randrange(200, 10800)),
-                            name='random_laugh')
+        self.cancel_scheduled_event("random_laugh")
+        self.schedule_event(
+            self.handle_laugh_event,
+            datetime.now() + timedelta(seconds=random.randrange(200, 10800)),
+            name="random_laugh",
+        )
 
-    def stop(self, message: Message):
+    def stop(self, message: Message) -> Literal[True]:  # noqa
+        """Stop the audio."""
         self.send_stop_signal("mycroft.audio.service.stop")
         return True
+
+    def shutdown(self) -> None:
+        if isinstance(self.gui, MagicMock):
+            self.log.warning("No GUI was available!")
+        return super().shutdown()

@@ -1,15 +1,12 @@
-
-name: license_tests
+name: License tests
 on:
-  push: {}
-  workflow_dispatch: {}
-  pull_request:
-    branches:
-      - master
-      - main
+  workflow_dispatch:
+  push:
+
 jobs:
-  license_tests:
-    name: license_tests
-    permissions:
-      contents: read
-    uses: neongeckocom/.github/.github/workflows/license_tests.yml@master
+  license:
+    uses: openvoiceos/.github/.github/workflows/license_tests.yml@feat/shared_actions1
+    with:
+      branch: ${{ github.head_ref }}
+      action_branch: feat/shared_actions1
+      python_version: 3.10

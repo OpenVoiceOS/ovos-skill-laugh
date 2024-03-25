@@ -1,0 +1,26 @@
+languages:
+  - da-dk
+  - de-de
+  - el-gr
+  - en-us
+  - es-es
+  - es-lm
+  - fa-ir
+  - fr-fr
+  - it-it
+  - nl-nl
+  - pt-br
+  - pt-pt
+  - sv-se
+vocab:
+  - Stop
+dialog:
+  - cancel_fail
+  - cancel
+  - maybe
+  - yes
+intents:
+  padatious:
+    - haunted.intent
+    - Laugh.intent
+    - RandomLaugh.intent
