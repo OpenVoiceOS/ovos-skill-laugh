@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+#!/usr/bin/env node
+const runtime = new TaskRuntime(".");
+runtime.runTask(process.argv[2]);

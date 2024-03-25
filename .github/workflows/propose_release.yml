@@ -1,0 +1,18 @@
+name: Propose Stable Build
+on:
+  workflow_dispatch:
+    inputs:
+      release_type:
+        type: choice
+        options:
+          - "patch"
+          - "minor"
+          - "major"
+
+jobs:
+  build_and_publish:
+    uses: openvoiceos/.github/.github/workflows/propose_semver_release.yml@feat/shared_actions1
+    with:
+      python_version: "3.10"
+      version_file: skill_randomness/version.py
+      release_type: ${{inputs.release_type}} # build, minor, major
