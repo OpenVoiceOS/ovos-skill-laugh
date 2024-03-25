@@ -1,0 +1,12 @@
+name: Auto translate
+on:
+  workflow_dispatch:
+
+jobs:
+  autotranslate:
+    uses: openvoiceos/.github/.github/workflows/auto_translate.yml@feat/shared_actions1
+    with:
+      branch: dev
+      action_branch: feat/shared_actions1
+      python_version: "3.10"
+      locale_folder: locale
