@@ -1,0 +1,16 @@
+{
+    "/vocab/RandomLaugh.intent": [
+        "laugh randomly",
+        "trigger random (laugh|laughing|laughs|laughter)",
+        "random (laugh|laughing|laughs|laughter)"
+    ],
+    "/vocab/Laugh.intent": [
+        "laugh like alexa",
+        "can you laugh",
+        "evil (laugh|laughing|laughs|laughter)"
+    ],
+    "/vocab/haunted.intent": [
+        "Are you haunted",
+        "Do you need an exorcism"
+    ]
+}

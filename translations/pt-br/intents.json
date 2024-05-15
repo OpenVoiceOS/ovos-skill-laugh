@@ -1,0 +1,12 @@
+{
+    "/vocab/RandomLaugh.intent": [
+        "ria aleatoriamente",
+        "disparar (riso|risos|risada) aleat\u00f3ria",
+        "(risada|risadinha|riso) (maligna|do mal) aleat\u00f3ria"
+    ],
+    "/vocab/Laugh.intent": [
+        "ria como a alexa",
+        "voc\u00ea (sabe|pode|consegue) rir",
+        "(risada|risadinha|riso) (maligna|do mal)"
+    ]
+}

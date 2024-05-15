@@ -1,0 +1,12 @@
+{
+    "/vocab/RandomLaugh.intent": [
+        "lach willekeurig",
+        "trigger (een)? willekeurig(e)? (lach|lachen|gelach)",
+        "willekeurig(e)? (lach|lachen|gelach)"
+    ],
+    "/vocab/Laugh.intent": [
+        "lach als alexa",
+        "kan jij lachen",
+        "kwaadaardig(e)? (lach|lachen|gelach)"
+    ]
+}

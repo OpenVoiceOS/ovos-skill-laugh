@@ -1,0 +1,12 @@
+{
+    "/vocab/RandomLaugh.intent": [
+        "lach zuf\u00e4llig",
+        "l\u00f6se zuf\u00e4lliges (Lachen|Gel\u00e4chter) aus",
+        "zuf\u00e4lliges (Lachen|Gel\u00e4chter)"
+    ],
+    "/vocab/Laugh.intent": [
+        "Lach wie Alexa",
+        "kannst du lachen",
+        "b\u00f6ses (Lachen|Gel\u00e4chter)"
+    ]
+}
