@@ -1,0 +1,12 @@
+{
+    "/vocab/RandomLaugh.intent": [
+        "skratta slumpm\u00e4ssigt",
+        "utl\u00f6s slumpm\u00e4ssigt (skratt|skrattande|skrattar|garv)",
+        "slumpm\u00e4ssigt (skratt|skrattar|skrattar|skratt)"
+    ],
+    "/vocab/Laugh.intent": [
+        "skratta som alexa",
+        "kan du skratta",
+        "ond (skrattar|garva|skrattande|skratt)"
+    ]
+}

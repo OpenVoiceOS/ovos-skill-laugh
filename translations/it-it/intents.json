@@ -1,0 +1,12 @@
+{
+    "/vocab/RandomLaugh.intent": [
+        "ridi casualmente",
+        "attivare (risata|risate|risa) casuali",
+        "(risate|ridi|risata) (casuali|casuale)"
+    ],
+    "/vocab/Laugh.intent": [
+        "ridi come alexa",
+        "puoi ridere",
+        "(risate|ridi|risata) malvagia"
+    ]
+}

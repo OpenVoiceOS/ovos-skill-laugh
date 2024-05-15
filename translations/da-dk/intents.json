@@ -1,0 +1,12 @@
+{
+    "/vocab/RandomLaugh.intent": [
+        "grin tilf\u00e6ldigt",
+        "trigger tilf\u00e6ldig (latter|grin)",
+        "tilf\u00e6ldig (latter|grin)"
+    ],
+    "/vocab/Laugh.intent": [
+        "Grin ligesom Alexa",
+        "kan du grine",
+        "ond (latter|grin|grine)"
+    ]
+}

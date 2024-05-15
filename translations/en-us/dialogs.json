@@ -1,0 +1,17 @@
+{
+    "/dialog/cancel_fail.dialog": [
+        "i am not laughing"
+    ],
+    "/dialog/yes.dialog": [
+        "yes"
+    ],
+    "/dialog/cancel.dialog": [
+        "laughing stopped",
+        "i wont laugh anymore"
+    ],
+    "/dialog/maybe.dialog": [
+        "no",
+        "maybe",
+        "who knows"
+    ]
+}

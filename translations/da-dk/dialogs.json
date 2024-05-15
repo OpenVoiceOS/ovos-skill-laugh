@@ -1,0 +1,9 @@
+{
+    "/dialog/cancel_fail.dialog": [
+        "Jeg griner ikke"
+    ],
+    "/dialog/cancel.dialog": [
+        "latter stoppet",
+        "jeg vil ikek grine mere"
+    ]
+}

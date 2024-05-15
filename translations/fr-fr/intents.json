@@ -1,0 +1,12 @@
+{
+    "/vocab/RandomLaugh.intent": [
+        "ris al\u00e9atoirement",
+        "(active le|) rire al\u00e9atoire",
+        "rire al\u00e9atoire"
+    ],
+    "/vocab/Laugh.intent": [
+        "ris comme alexa",
+        "peux tu rire ?",
+        "(ricane|rire d\u00e9moniaque|rire sadique)"
+    ]
+}
