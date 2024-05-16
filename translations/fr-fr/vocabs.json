@@ -1,13 +1,7 @@
 {
-    "/vocab/Stop.voc": [
-        "abandonner",
-        "annule",
-        "(stop|stoppe|arr\u00eate|c'est pas dr\u00f4le)"
-    ],
-    "/vocab/Laugh.voc": [
-        "rire",
-        "ris",
-        "ris",
-        "rire"
-    ]
+  "/vocab/Stop.voc": [
+    "abandonne",
+    "annule",
+    "(stop|arrête|c'est pas drôle)"
+  ]
 }
