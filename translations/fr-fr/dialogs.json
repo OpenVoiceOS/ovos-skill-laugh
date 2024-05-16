@@ -1,9 +1,17 @@
 {
-    "/dialog/cancel_fail.dialog": [
-        "je ne ris pas"
-    ],
-    "/dialog/cancel.dialog": [
-        "rire stopp\u00e9",
-        "je ne rirais plus"
-    ]
+  "/dialog/cancel_fail.dialog": [
+    "ça ne me fait pas rire"
+  ],
+  "/dialog/yes.dialog": [
+    "Oui"
+  ],
+  "/dialog/cancel.dialog": [
+    "rire arrêté",
+    "je ne rirais plus"
+  ],
+  "/dialog/maybe.dialog": [
+    "Non",
+    "peut être",
+    "qui sait"
+  ]
 }
