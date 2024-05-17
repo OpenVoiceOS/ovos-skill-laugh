@@ -1,19 +1,16 @@
 {
-    "/vocab/RandomLaugh.intent": [
-        "(ri|riso|ri te) (aleatoriamente|aleatorio|ocasional|ocasionalmente|as vezes)"
-    ],
-    "/vocab/Laugh.intent": [
-        "ri como a alexa",
-        "faz um riso malvado",
-        "risada malefica",
-        "ri te maleficamente",
-        "riso malefico",
-        "sabes rir-te",
-        "sabes rir te",
-        "sabes te rir",
-        "sabes-te rir",
-        "consegues rir",
-        "consegues rir te",
-        "consegues rir-te"
-    ]
+  "/vocab/RandomLaugh.intent": [
+    "(ri|riso|ri te) (aleatoriamente|aleatorio|ocasional|ocasionalmente|as vezes)",
+    "[UNUSED]",
+    "[UNUSED]"
+  ],
+  "/vocab/Laugh.intent": [
+    "ri como a alexa",
+    "faz um riso malvado",
+    "risada malefica"
+  ],
+  "/vocab/haunted.intent": [
+    "estás (assombrada|assombrado)",
+    "precisas de um exorcismo?"
+  ]
 }
