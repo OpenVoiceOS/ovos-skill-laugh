@@ -1,4 +1,3 @@
-
 name: update_skill_json
 on:
   push: {}
