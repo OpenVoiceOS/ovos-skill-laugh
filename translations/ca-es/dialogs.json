@@ -3,15 +3,15 @@
     "no estic rient\nno ric\nno fa gràcia\nno fa riure"
   ],
   "/dialog/yes.dialog": [
-    null
+    "sí"
   ],
   "/dialog/cancel.dialog": [
-    null,
-    null
+    "s'ha acabat el riure\nprou de riure",
+    "no riuré més\nno vull riure més"
   ],
   "/dialog/maybe.dialog": [
-    null,
-    null,
-    null
+    "no",
+    "potser",
+    "qui ho sap\nves a saber"
   ]
 }
