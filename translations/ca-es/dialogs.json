@@ -1,0 +1,17 @@
+{
+  "/dialog/cancel_fail.dialog": [
+    "no estic rient\nno ric\nno fa gràcia\nno fa riure"
+  ],
+  "/dialog/yes.dialog": [
+    null
+  ],
+  "/dialog/cancel.dialog": [
+    null,
+    null
+  ],
+  "/dialog/maybe.dialog": [
+    null,
+    null,
+    null
+  ]
+}
