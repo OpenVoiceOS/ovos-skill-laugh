@@ -1,0 +1,17 @@
+{
+  "/dialog/cancel_fail.dialog": [
+    "no estic rient\nno ric\nno fa gràcia\nno fa riure"
+  ],
+  "/dialog/yes.dialog": [
+    "sí"
+  ],
+  "/dialog/cancel.dialog": [
+    "s'ha acabat el riure\nprou de riure",
+    "no riuré més\nno vull riure més"
+  ],
+  "/dialog/maybe.dialog": [
+    "no",
+    "potser",
+    "qui ho sap\nves a saber"
+  ]
+}
