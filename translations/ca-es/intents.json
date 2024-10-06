@@ -1,0 +1,16 @@
+{
+  "/vocab/RandomLaugh.intent": [
+    "riu (aleatòriament|de forma aleatòria|random)",
+    "(fes|executa) (un riure|una rialla)(aleatori|aleatòria|random)",
+    "(riure|rialla)(aleatori|aleatòria|random)"
+  ],
+  "/vocab/Laugh.intent": [
+    "riu com (l'|)Alexa",
+    "(saps|pots) riure",
+    "(riure diabòlic|rialla diabòlica)"
+  ],
+  "/vocab/haunted.intent": [
+    "Estàs (embruixat|embruixada|posseït|posseïda)",
+    "(Et cal|Necessites) un (exorcisme|exorcista)"
+  ]
+}
