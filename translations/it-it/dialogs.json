@@ -6,12 +6,12 @@
     "sì"
   ],
   "/dialog/cancel.dialog": [
-    null,
+    "(ho smesso di ridere|non rido più)",
     "non riderò più"
   ],
   "/dialog/maybe.dialog": [
     "no",
     "forse",
-    null
+    "(chi sa|chissà|boh)"
   ]
 }
