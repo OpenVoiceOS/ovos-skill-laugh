@@ -10,7 +10,7 @@
     "(risate|ridi|risata) malvagi(a|e)"
   ],
   "/vocab/haunted.intent": [
-    null,
+    "sei possedut(o|a)?",
     "Hai bisogno di (un esorcismo|essere esorcizzato)?"
   ]
 }
