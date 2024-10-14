@@ -1,12 +1,16 @@
 {
-    "/vocab/RandomLaugh.intent": [
-        "ridi casualmente",
-        "attivare (risata|risate|risa) casuali",
-        "(risate|ridi|risata) (casuali|casuale)"
-    ],
-    "/vocab/Laugh.intent": [
-        "ridi come alexa",
-        "puoi ridere",
-        "(risate|ridi|risata) malvagia"
-    ]
+  "/vocab/RandomLaugh.intent": [
+    "ridi a caso",
+    "attiva (risata|risate|risa) a caso",
+    "(risate|ridi|risata) a caso"
+  ],
+  "/vocab/Laugh.intent": [
+    "ridi come alexa",
+    "puoi ridere?",
+    "(risate|ridi|risata) malvagi(a|e)"
+  ],
+  "/vocab/haunted.intent": [
+    "sei possedut(o|a)?",
+    "Hai bisogno di (un esorcismo|essere esorcizzato)?"
+  ]
 }
