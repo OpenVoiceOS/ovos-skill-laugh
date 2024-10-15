@@ -1,18 +1,32 @@
-name: Propose Stable Build
+name: Propose Stable Release
 on:
   workflow_dispatch:
     inputs:
       release_type:
         type: choice
+        description: Release Type
         options:
-          - "patch"
-          - "minor"
-          - "major"
-
+          - build
+          - minor
+          - major
 jobs:
-  build_and_publish:
-    uses: openvoiceos/.github/.github/workflows/propose_semver_release.yml@feat/shared_actions1
+  update_version:
+    uses: neongeckocom/.github/.github/workflows/propose_semver_release.yml@master
     with:
-      python_version: "3.10"
-      version_file: skill_randomness/version.py
-      release_type: ${{inputs.release_type}} # build, minor, major
+      release_type: ${{ inputs.release_type }}
+      version_file: version.py
+      alpha_var: VERSION_ALPHA
+      build_var: VERSION_BUILD
+      minor_var: VERSION_MINOR
+      major_var: VERSION_MAJOR
+      update_changelog: True
+      branch: dev
+
+  pull_changes:
+    needs: update_version
+    uses: neongeckocom/.github/.github/workflows/pull_master.yml@master
+    with:
+      pr_assignee: ${{ github.actor }}
+      pr_draft: false
+      pr_title: ${{ needs.update_version.outputs.version }}
+      pr_body: ${{ needs.update_version.outputs.changelog }}
