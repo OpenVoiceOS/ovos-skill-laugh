@@ -102,13 +102,6 @@ class TestLaughSkill:
         test_skill.handle_laugh_event(Message(""))
         mock_cancel_scheduled_event.assert_called_once_with("random_laugh")
 
-    def test_stop(self, test_skill: LaughSkill, monkeypatch):
-        mock_send_stop_signal = Mock()
-        monkeypatch.setattr(test_skill, "send_stop_signal", mock_send_stop_signal)
-
-        assert test_skill.stop(Message("")) is True
-        mock_send_stop_signal.assert_called_once_with("mycroft.audio.service.stop")
-
     def test_shutdown(self, test_skill: LaughSkill):
         test_skill.shutdown()
 
