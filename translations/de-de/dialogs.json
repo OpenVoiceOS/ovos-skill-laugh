@@ -1,9 +1,17 @@
 {
-    "/dialog/cancel_fail.dialog": [
-        "ich lache nicht"
-    ],
-    "/dialog/cancel.dialog": [
-        "Lachen hat aufgeh\u00f6rt",
-        "ich werde nicht wieder lachen"
-    ]
+  "/dialog/cancel_fail.dialog": [
+    "ich lache nicht"
+  ],
+  "/dialog/yes.dialog": [
+    "Ja"
+  ],
+  "/dialog/cancel.dialog": [
+    "Lachen hat aufgehört",
+    "ich werde nicht wieder lachen"
+  ],
+  "/dialog/maybe.dialog": [
+    "Nein",
+    "Vielleicht",
+    "wer weiß"
+  ]
 }
