@@ -1,12 +1,16 @@
 {
-    "/vocab/RandomLaugh.intent": [
-        "lach zuf\u00e4llig",
-        "l\u00f6se zuf\u00e4lliges (Lachen|Gel\u00e4chter) aus",
-        "zuf\u00e4lliges (Lachen|Gel\u00e4chter)"
-    ],
-    "/vocab/Laugh.intent": [
-        "Lach wie Alexa",
-        "kannst du lachen",
-        "b\u00f6ses (Lachen|Gel\u00e4chter)"
-    ]
+  "/vocab/RandomLaugh.intent": [
+    "lache zufällig",
+    "löse zufälliges (Lachen|Gelächter) aus",
+    "zufälliges (Lachen|Gelächter)"
+  ],
+  "/vocab/Laugh.intent": [
+    "Lache wie Alexa",
+    "kannst du lachen",
+    "böses (Lachen|Gelächter)"
+  ],
+  "/vocab/haunted.intent": [
+    "Bist du verwunschen",
+    "Brauchst Du einen Exorzismus"
+  ]
 }
