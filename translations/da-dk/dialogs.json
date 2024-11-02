@@ -7,10 +7,10 @@
   ],
   "/dialog/cancel.dialog": [
     "latter stoppet",
-    null
+    "jeg vil ikke grine mere"
   ],
   "/dialog/maybe.dialog": [
-    null,
+    "nej",
     "måske",
     "hvem ved"
   ]
