@@ -1,9 +1,17 @@
 {
-    "/dialog/cancel_fail.dialog": [
-        "Jeg griner ikke"
-    ],
-    "/dialog/cancel.dialog": [
-        "latter stoppet",
-        "jeg vil ikek grine mere"
-    ]
+  "/dialog/cancel_fail.dialog": [
+    "Jeg griner ikke"
+  ],
+  "/dialog/yes.dialog": [
+    "ja"
+  ],
+  "/dialog/cancel.dialog": [
+    "latter stoppet",
+    "jeg vil ikke grine mere"
+  ],
+  "/dialog/maybe.dialog": [
+    "nej",
+    "måske",
+    "hvem ved"
+  ]
 }
