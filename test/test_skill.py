@@ -15,7 +15,7 @@ from skill_laugh import LaughSkill
 
 @pytest.fixture(scope="session")
 def test_skill(
-    test_skill_id="skill-laugh.openvoiceos", bus=FakeBus()
+    test_skill_id="ovos-skill-laugh.openvoiceos", bus=FakeBus()
 ) -> Generator[LaughSkill, Any, None]:
     bus.emitter = bus.ee
     bus.run_forever()
@@ -107,7 +107,7 @@ class TestLaughSkill:
 
 
 def test_skill_is_a_valid_plugin():
-    assert "skill-laugh.openvoiceos" in find_skill_plugins()
+    assert "ovos-skill-laugh.openvoiceos" in find_skill_plugins()
 
 
 if __name__ == "__main__":
