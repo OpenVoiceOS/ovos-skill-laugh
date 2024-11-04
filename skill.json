@@ -51,5 +51,5 @@
     "skillname": "ovos-skill-laugh",
     "authorname": "OpenVoiceOS",
     "foldername": null,
-    "settings": "~/.config/ovos/skills/skill-laugh.openvoiceos/settings.json ~/.config/neon/skills/skill-laugh.openvoiceos/settings.json ```json {   \"gender\": \"robot\", // or \"male\" or \"female\"   \"haunted\": false, // default true, \"mine is an evil laugh\"   \"sounds_dir\": \"/home/neon/venv/lib/python3.10/site-packages/skill_laugh/sounds\", // default on a Neon setup, can be set to anything OVOS/Neon can access   \"__mycroft_skill_firstrun\": false } ```"
+    "settings": "~/.config/ovos/skills/skill-laugh.openvoiceos/settings.json ~/.config/neon/skills/skill-laugh.openvoiceos/settings.json ```js {   \"gender\": \"robot\", // or \"male\" or \"female\"   \"haunted\": false, // default true, \"mine is an evil laugh\"   \"sounds_dir\": \"/home/neon/venv/lib/python3.10/site-packages/skill_laugh/sounds\", // default on a Neon setup, can be set to anything OVOS/Neon can access   \"__mycroft_skill_firstrun\": false } ```"
 }
