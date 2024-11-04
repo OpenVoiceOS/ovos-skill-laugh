@@ -10,7 +10,7 @@ import pytest
 from ovos_bus_client import Message
 from ovos_plugin_manager.skills import find_skill_plugins
 from ovos_utils.fakebus import FakeBus
-from skill_laugh import LaughSkill
+from ovos_skill_laugh import LaughSkill
 
 
 @pytest.fixture(scope="session")
