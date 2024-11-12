@@ -18,7 +18,7 @@ Laugh randomly or when requested.
 ~/.config/ovos/skills/skill-laugh.openvoiceos/settings.json
 ~/.config/neon/skills/skill-laugh.openvoiceos/settings.json
 
-```json
+```js
 {
   "gender": "robot", // or "male" or "female"
   "haunted": false, // default true, "mine is an evil laugh"
