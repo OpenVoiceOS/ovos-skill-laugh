@@ -12,7 +12,7 @@ jobs:
     secrets: inherit
     with:
       branch: "dev"
-      version_file: "skill_randomness/version.py"
+      version_file: "version.py"
       setup_py: "setup.py"
       update_changelog: true
       publish_prerelease: true

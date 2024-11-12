@@ -44,7 +44,7 @@ class TestLaughSkill:
         ],
     )
     def test_special_day(self, test_skill: LaughSkill, date, expected):
-        with patch("skill_laugh.datetime") as mock_date:
+        with patch("ovos_skill_laugh.datetime") as mock_date:
             mock_date.today.return_value = date
             assert test_skill.special_day() == expected
 
