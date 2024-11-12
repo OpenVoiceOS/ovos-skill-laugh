@@ -3,21 +3,35 @@ on:
   pull_request: {}
   workflow_dispatch: {}
 jobs:
-  py_build_tests:
-    name: py_build_tests
-    permissions:
-      contents: read
-    uses: openvoiceos/.github/.github/workflows/python_build_tests.yml@feat/shared_actions1
-    with:
-      python_matrix: '[3.9, "3.10", "3.11"]'
+  # skill_unit_tests:
+  #   name: skill_unit_tests
+  #   permissions:
+  #     contents: read
+  #   uses: neongeckocom/.github/.github/workflows/skill_tests.yml@master
+  #   with:
+  #     ovos_versions: '["3.10", "3.11"]'
   skill_unit_tests:
     name: skill_unit_tests
-    permissions:
-      contents: read
-    uses: openvoiceos/.github/.github/workflows/pytest_file_or_dir.yml@feat/shared_actions1
-    with:
-      action_branch: feat/shared_actions1
-      test_location: test
-      python_matrix: '[3.9, "3.10", "3.11"]'
-      is_skill: true
-      upload_coverage: true
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Build Tools
+        run: |
+          python -m pip install build wheel setuptools
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt install python3-dev swig libssl-dev
+      - name: Install skill
+        run: |
+          pip install ".[test]"
+      - name: Run Skill Tests
+        run: |
+          python -m pytest test/

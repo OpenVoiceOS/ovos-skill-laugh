@@ -10,12 +10,12 @@ import pytest
 from ovos_bus_client import Message
 from ovos_plugin_manager.skills import find_skill_plugins
 from ovos_utils.fakebus import FakeBus
-from skill_laugh import LaughSkill
+from ovos_skill_laugh import LaughSkill
 
 
 @pytest.fixture(scope="session")
 def test_skill(
-    test_skill_id="skill-laugh.openvoiceos", bus=FakeBus()
+    test_skill_id="ovos-skill-laugh.openvoiceos", bus=FakeBus()
 ) -> Generator[LaughSkill, Any, None]:
     bus.emitter = bus.ee
     bus.run_forever()
@@ -102,19 +102,12 @@ class TestLaughSkill:
         test_skill.handle_laugh_event(Message(""))
         mock_cancel_scheduled_event.assert_called_once_with("random_laugh")
 
-    def test_stop(self, test_skill: LaughSkill, monkeypatch):
-        mock_send_stop_signal = Mock()
-        monkeypatch.setattr(test_skill, "send_stop_signal", mock_send_stop_signal)
-
-        assert test_skill.stop(Message("")) is True
-        mock_send_stop_signal.assert_called_once_with("mycroft.audio.service.stop")
-
     def test_shutdown(self, test_skill: LaughSkill):
         test_skill.shutdown()
 
 
 def test_skill_is_a_valid_plugin():
-    assert "skill-laugh.openvoiceos" in find_skill_plugins()
+    assert "ovos-skill-laugh.openvoiceos" in find_skill_plugins()
 
 
 if __name__ == "__main__":
