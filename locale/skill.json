@@ -1,0 +1,59 @@
+{
+    "title": "Laugh",
+    "url": "https://github.com/OpenVoiceOS/ovos-skill-laugh",
+    "summary": "![Python](https://img.shields.io/badge/python-3.8-blue.svg) ![Python](https://img.shields.io/badge/python-3.9-blue.svg) ![Python](https://img.shields.io/badge/python-3.10-blue.svg) ![Python](https://img.shields.io/badge/python-3.11-blue.svg) Makes your voice assistant laugh like a maniac ![A ghostly face, laughing evilly.](./ui/images/2.jpg)",
+    "short_description": "![Python](https://img.shields.io/badge/python-3.8-blue.svg) ![Python](https://img.shields.io/badge/python-3.9-blue.svg) ![Python](https://img.shields.io/badge/python-3.10-blue.svg) ![Python](https://img.shields.io/badge/python-3.11-blue.svg) Makes your voice assistant laugh like a maniac ![A ghostly face, laughing evilly.](./ui/images/2.jpg)",
+    "description": "Laugh randomly or when requested.",
+    "examples": [
+        "Laugh like Alexa",
+        "can you laugh"
+    ],
+    "desktopFile": false,
+    "warning": "",
+    "systemDeps": false,
+    "requirements": {
+        "python": [
+            "ovos-audio",
+            "ovos-plugin-manager",
+            "ovos-utils",
+            "ovos-workshop"
+        ],
+        "system": {},
+        "skill": []
+    },
+    "incompatible_skills": [],
+    "platforms": [
+        "i386",
+        "x86_64",
+        "ia64",
+        "arm64",
+        "arm"
+    ],
+    "branch": "master",
+    "license": "Unknown",
+    "icon": "res/icon/laugh_icon.png",
+    "category": "Entertainment",
+    "categories": [
+        "Entertainment"
+    ],
+    "tags": [
+        "laugh",
+        "funny",
+        "entertainment",
+        "repeating"
+    ],
+    "credits": [
+        "- [@JarbasAl](https://jarbasal.github.io)",
+        "- [@mikejgray](https://graywind.org) (revival)",
+        "- [SoundBible](http://soundbible.com/suggest.php?q=laugh&x=0&y=0)",
+        "- [FreeSound](https://freesound.org/search/?q=female+evil+laugh)",
+        "- [0.jpg](https://pixabay.com/illustrations/ai-generated-woman-horror-monster-8960870/)",
+        "- [1.jpg](https://pixabay.com/illustrations/ai-generated-ghost-apparition-8960859/)",
+        "- [2.jpg](https://pixabay.com/photos/skull-skull-and-crossbones-skeleton-570975/)",
+        "- [3.jpg](https://pixabay.com/illustrations/ai-generated-halloween-ghost-horror-8307427/)"
+    ],
+    "skillname": "ovos-skill-laugh",
+    "authorname": "OpenVoiceOS",
+    "foldername": null,
+    "settings": "~/.config/ovos/skills/skill-laugh.openvoiceos/settings.json ~/.config/neon/skills/skill-laugh.openvoiceos/settings.json ```js {   \"gender\": \"robot\", // or \"male\" or \"female\"   \"haunted\": false, // default true, \"mine is an evil laugh\"   \"sounds_dir\": \"/home/neon/venv/lib/python3.10/site-packages/skill_laugh/sounds\", // default on a Neon setup, can be set to anything OVOS/Neon can access   \"__mycroft_skill_firstrun\": false } ```"
+}
