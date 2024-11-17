@@ -10,6 +10,7 @@ jobs:
   sync:
     name: Sync skill.json to locale
     runs-on: ubuntu-latest
+    needs: update-skill-json
     permissions:
       contents: write
     steps:
