@@ -53,3 +53,7 @@ Laugh randomly or when requested.
 #funny
 #entertainment
 #repeating
+
+## License
+
+Apache-2.0
