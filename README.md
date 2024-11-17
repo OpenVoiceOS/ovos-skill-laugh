@@ -7,7 +7,7 @@
 
 Makes your voice assistant laugh like a maniac
 
-![A ghostly face, laughing evilly.](./sshot.png)
+![A ghostly face, laughing evilly.](./ui/images/2.jpg)
 
 ## About
 
@@ -38,6 +38,10 @@ Laugh randomly or when requested.
 - [@mikejgray](https://graywind.org) (revival)
 - [SoundBible](http://soundbible.com/suggest.php?q=laugh&x=0&y=0)
 - [FreeSound](https://freesound.org/search/?q=female+evil+laugh)
+- [0.jpg](https://pixabay.com/illustrations/ai-generated-woman-horror-monster-8960870/)
+- [1.jpg](https://pixabay.com/illustrations/ai-generated-ghost-apparition-8960859/)
+- [2.jpg](https://pixabay.com/photos/skull-skull-and-crossbones-skeleton-570975/)
+- [3.jpg](https://pixabay.com/illustrations/ai-generated-halloween-ghost-horror-8307427/)
 
 ## Category
 

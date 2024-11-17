@@ -1,4 +1,3 @@
-
 name: update_skill_json
 on:
   push: {}
@@ -8,3 +7,19 @@ jobs:
     permissions:
       contents: write
     uses: neongeckocom/.github/.github/workflows/skill_update_json_spec.yml@master
+  sync:
+    name: Sync skill.json to locale
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Sync skill.json
+        run: |
+          cp skill.json locale/skill.json
+      - name: Push skill.json Change
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Sync skill.json
+          repository: action/skill/
