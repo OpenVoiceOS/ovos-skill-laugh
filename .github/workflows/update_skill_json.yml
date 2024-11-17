@@ -23,3 +23,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Sync skill.json
+          file_pattern: 'locale/skill.json'
+          skip_dirty_check: false
+          commit_author: "GitHub Actions <actions@github.com>"
