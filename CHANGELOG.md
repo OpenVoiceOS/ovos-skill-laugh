@@ -1,47 +1,16 @@
 # Changelog
 
-## [0.1.1a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.1.1a1) (2024-11-12)
+## [0.2.0a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.0a1) (2024-11-19)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/19a8eb8e6f910823e945787324d9e6c8c5660df7...0.1.1a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.1.1...0.2.0a1)
 
 **Fixed bugs:**
 
-- Not on PyPi [\#20](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/20)
-- chore: housekeeping [\#19](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/19) ([mikejgray](https://github.com/mikejgray))
-
-**Closed issues:**
-
-- add setup.py [\#18](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/18)
-- better bigscreen support - settings [\#14](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/14)
-- Make tagged releases [\#12](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/12)
-- support .mp3 and .ogg [\#6](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/6)
-- Get this skill to market. [\#5](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/5)
-- laugh may be interrupted by speech [\#4](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/4)
-- use audio service [\#3](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/3)
-- dont laugh over speak [\#1](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/1)
+- replace images [\#16](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/16)
 
 **Merged pull requests:**
 
-- chore: target correct version.py [\#36](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/36) ([mikejgray](https://github.com/mikejgray))
-- da-dk/translate [\#35](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/35) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- de-de/translate [\#34](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/34) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- chore: release automations [\#33](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/33) ([mikejgray](https://github.com/mikejgray))
-- fix:long description [\#32](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/32) ([JarbasAl](https://github.com/JarbasAl))
-- added terms in Italian [\#30](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/30) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- accepted addition translation [\#29](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/29) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Add Catalan translation [\#28](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/28) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Add Catalan translation [\#27](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/27) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Add Catalan translation [\#26](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/26) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- pt-pt/translate [\#24](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/24) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Missing translation [\#23](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/23) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Missing translation [\#22](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/22) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Better translation [\#21](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/21) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-- Updated translations [\#17](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/17) ([devs-mycroft](https://github.com/devs-mycroft))
-- Set callback with 19.08+ method [\#11](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/11) ([forslund](https://github.com/forslund))
-- Updated translations [\#10](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/10) ([devs-mycroft](https://github.com/devs-mycroft))
-- Updated translations [\#9](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/9) ([devs-mycroft](https://github.com/devs-mycroft))
-- Updated translations [\#8](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/8) ([devs-mycroft](https://github.com/devs-mycroft))
-- Updated translations: \['de-de', 'es-es'\] [\#7](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/7) ([devs-mycroft](https://github.com/devs-mycroft))
+- feat: royalty free images [\#40](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/40) ([mikejgray](https://github.com/mikejgray))
 
 
 
