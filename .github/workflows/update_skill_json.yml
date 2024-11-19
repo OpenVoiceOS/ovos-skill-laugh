@@ -18,11 +18,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Sync skill.json
         run: |
-          cp skill.json locale/skill.json
+          cp skill.json locale/en-us/skill.json
       - name: Push skill.json Change
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Sync skill.json
-          file_pattern: 'locale/skill.json'
+          file_pattern: "locale/skill.json"
           skip_dirty_check: false
           commit_author: "GitHub Actions <actions@github.com>"
