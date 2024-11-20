@@ -99,7 +99,7 @@ class LaughSkill(OVOSSkill):
 
         self.gui.clear()
         pic = random.randint(0, 3)
-        self.gui.show_image(join(dirname(__file__), "ui", "images", str(pic) + ".jpg"))
+        self.gui.show_image(str(pic) + ".jpg")
         self.play_audio(sound)
         self.gui.clear()
 
