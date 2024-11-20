@@ -1,16 +1,12 @@
 # Changelog
 
-## [0.2.0a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.0a1) (2024-11-19)
+## [0.2.0a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.0a2) (2024-11-20)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.1.1...0.2.0a1)
-
-**Fixed bugs:**
-
-- replace images [\#16](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/16)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.0...0.2.0a2)
 
 **Merged pull requests:**
 
-- feat: royalty free images [\#40](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/40) ([mikejgray](https://github.com/mikejgray))
+- modernize [\#38](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/38) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
