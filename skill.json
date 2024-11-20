@@ -14,6 +14,7 @@
     "requirements": {
         "python": [
             "ovos-audio",
+            "ovos-bus-client>=1.0.1",
             "ovos-plugin-manager",
             "ovos-utils",
             "ovos-workshop"
