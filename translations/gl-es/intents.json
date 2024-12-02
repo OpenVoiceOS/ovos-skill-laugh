@@ -1,0 +1,16 @@
+{
+    "/vocab/RandomLaugh.intent": [
+        "rir ao chou",
+        "(risa|riso|risos|risada) ao chou",
+        "activar (risa|riso|risos|risada) ao chou"
+    ],
+    "/vocab/Laugh.intent": [
+        "podes rir",
+        "(risa|riso|risos|risada) (malvada|malvado|malvados)",
+        "rir como alexa"
+    ],
+    "/vocab/haunted.intent": [
+        "Tes un meigallo?",
+        "Precisas dun exorcismo?"
+    ]
+}
