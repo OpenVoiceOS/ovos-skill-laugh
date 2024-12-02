@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.1a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.1a2) (2024-12-02)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.1a1...0.2.1a2)
+
+**Fixed bugs:**
+
+- GUi doesnt like 1.jpg [\#44](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/44)
+
+**Merged pull requests:**
+
+- import galician translations [\#46](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/46) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.1a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.1a1) (2024-11-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.0a2...0.2.1a1)
