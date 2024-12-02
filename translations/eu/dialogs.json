@@ -1,0 +1,17 @@
+{
+    "/dialog/cancel_fail.dialog": [
+        "ez naiz barrez ari"
+    ],
+    "/dialog/yes.dialog": [
+        "bai"
+    ],
+    "/dialog/cancel.dialog": [
+        "Ez dut barre gehiagorik egingo",
+        "akabo barreak"
+    ],
+    "/dialog/maybe.dialog": [
+        "agian",
+        "ez",
+        "nork daki"
+    ]
+}
