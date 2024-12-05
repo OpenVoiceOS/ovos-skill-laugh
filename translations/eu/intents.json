@@ -1,0 +1,16 @@
+{
+    "/vocab/RandomLaugh.intent": [
+        "barre egin ausaz",
+        "ausazko (barre|irri|algara|karkara)",
+        "eragin ausazko (barre|irri|algara|karkara)"
+    ],
+    "/vocab/Laugh.intent": [
+        "barre egin al dezakezu?",
+        "(barre|irri|algara|karkara) maltzurra",
+        "barre egin alexa bezala"
+    ],
+    "/vocab/haunted.intent": [
+        "Sorginduta al zaude?",
+        "Exorzismo bat behar al duzu?"
+    ]
+}
