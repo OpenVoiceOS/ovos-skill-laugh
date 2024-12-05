@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1a3](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.1a3) (2024-12-05)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.1a2...0.2.1a3)
+
+**Merged pull requests:**
+
+- import galician and basque translations [\#48](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/48) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.1a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.1a2) (2024-12-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.1a1...0.2.1a2)
