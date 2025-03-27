@@ -19,8 +19,6 @@ class LaughSkill(OVOSSkill):
     def sounds_dir(self) -> str:
         """Path to the sounds directory."""
         default = join(dirname(__file__), "sounds")
-        if not self.settings.get("sounds_dir"):
-            self.sounds_dir = default
         return self.settings.get("sounds_dir", default)
 
     @property
