@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.3a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.3a1) (2025-03-27)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.2a1...0.2.3a1)
+
+**Closed issues:**
+
+- evil laugh - "sample format not available" [\#13](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/13)
+
+**Merged pull requests:**
+
+- fix:extend catalan [\#53](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/53) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.2a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.2a1) (2025-03-27)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.1a3...0.2.2a1)
