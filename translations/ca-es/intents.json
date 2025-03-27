@@ -13,7 +13,7 @@
     "(riure diabòlic|rialla diabòlica)",
     "fes un riure malèfic",
     "riu de forma sinistra",
-    "riu com un (diable|demoníac)",
+    "riu com un (boig|boja|desquiciat|dement|diable|demoníac)",
     "per què no rius",
     "no rius",
     "què et fa no riure",
@@ -21,7 +21,7 @@
     "ensenya'm com rius",
     "m'agradaria que riguessis",
     "t'agrada riure",
-    "vull que riuis",
+    "(vull|voldria|m'agradaria|desitjo) que (riguis|rius|riuis)",
     "riu una mica"
   ],
   "/vocab/haunted.intent": [
