@@ -1,3 +1,7 @@
 lach willekeurig
-trigger (een)? willekeurig(e)? (lach|lachen|gelach)
-willekeurig(e)? (lach|lachen|gelach)
+trigger een? willekeurige? gelach
+trigger een? willekeurige? lach
+trigger een? willekeurige? lachen
+willekeurige? gelach
+willekeurige? lach
+willekeurige? lachen
