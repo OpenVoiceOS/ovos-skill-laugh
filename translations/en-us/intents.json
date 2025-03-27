@@ -1,16 +1,31 @@
 {
-    "/vocab/RandomLaugh.intent": [
-        "laugh randomly",
-        "trigger random (laugh|laughing|laughs|laughter)",
-        "random (laugh|laughing|laughs|laughter)"
-    ],
-    "/vocab/Laugh.intent": [
-        "laugh like alexa",
-        "can you laugh",
-        "evil (laugh|laughing|laughs|laughter)"
-    ],
-    "/vocab/haunted.intent": [
-        "Are you haunted",
-        "Do you need an exorcism"
-    ]
+  "/vocab/RandomLaugh.intent": [
+    "laugh randomly",
+    "trigger random (laugh|laughing|laughs|laughter)",
+    "random (laugh|laughing|laughs|laughter)",
+    "laugh unpredictably",
+    "trigger a random laugh",
+    "set laugh to random mode"
+  ],
+  "/vocab/Laugh.intent": [
+    "laugh like alexa",
+    "can you laugh",
+    "evil (laugh|laughing|laughs|laughter)",
+    "laugh malevolently",
+    "laugh sinisterly",
+    "laugh like a (devil|demon)",
+    "why don't you laugh",
+    "don't you laugh",
+    "what's stopping you from laughing",
+    "why aren't you laughing",
+    "show me how you laugh",
+    "I would like you to laugh",
+    "do you like laughing",
+    "I want you to laugh",
+    "laugh a little"
+  ],
+  "/vocab/haunted.intent": [
+    "are you (possessed|haunted)",
+    "do you need an exorcism"
+  ]
 }
