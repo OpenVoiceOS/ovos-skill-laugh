@@ -2,15 +2,30 @@
   "/vocab/RandomLaugh.intent": [
     "lache zufällig",
     "löse zufälliges (Lachen|Gelächter) aus",
-    "zufälliges (Lachen|Gelächter)"
+    "zufälliges (Lachen|Gelächter)",
+    "lache unvorhersehbar",
+    "löse ein zufälliges Lachen aus",
+    "Lachen auf Zufallsmodus einstellen"
   ],
   "/vocab/Laugh.intent": [
     "Lache wie Alexa",
     "kannst du lachen",
-    "böses (Lachen|Gelächter)"
+    "böses (Lachen|Gelächter)",
+    "lache bösartig",
+    "lache unheilvoll",
+    "lache wie ein (Teufel|Dämon)",
+    "warum lachst du nicht",
+    "lachst du nicht",
+    "was hält dich vom Lachen ab",
+    "warum lachst du nicht",
+    "zeig mir wie du lachst",
+    "Ich möchte, dass du lachst",
+    "lachst du gerne",
+    "Ich möchte, dass du lachst",
+    "lache ein bisschen"
   ],
   "/vocab/haunted.intent": [
-    "Bist du verwunschen",
-    "Brauchst Du einen Exorzismus"
+    "bist du (besessen | heimgesucht)",
+    "brauchst du einen Exorzismus"
   ]
 }
