@@ -1,0 +1,15 @@
+{
+	"title": "Laugh",
+	"url": "https://github.com/OpenVoiceOS/ovos-skill-laugh",
+	"description": "Se ríe aleatoriamente o cuando se le pide que lo haga",
+	"examples": [
+    	"ríete como Alexa",
+    	"¿puedes reírte?"
+	],
+	"tags": [
+    	"risa",
+    	"divertido",
+    	"entretenimiento",
+    	"repetir"
+	]
+}
