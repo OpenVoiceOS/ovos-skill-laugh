@@ -1,12 +1,31 @@
 {
-    "/vocab/RandomLaugh.intent": [
-        "(r\u00edete|reir|r\u00ede) al azar",
-        "activa una (risa|carcajada|risotada) aleatoria",
-        "(risa|carcajada|risotada) aleatoria"
-    ],
-    "/vocab/Laugh.intent": [
-        "r\u00edete como Alexa",
-        "\u00bfpuedes re\u00edrte?",
-        "(risa|carcajada|risotada) malvada"
-    ]
+  "/vocab/RandomLaugh.intent": [
+    "(ríete|reir|ríe) al azar",
+    "activa una (risa|carcajada|risotada) aleatoria",
+    "(risa|carcajada|risotada) aleatoria",
+    "(Ríe|Ríete|Reír) de forma impredecible",
+    "activa una risa (aleatoria|al azar)",
+    "establece risa en modo aleatorio"
+  ],
+  "/vocab/Laugh.intent": [
+    "(ríe|ríete|reír) como Alexa",
+    "¿puedes reírte?",
+    "(risa|carcajada|risotada) malvada",
+    "(Ríe|Ríete|Reír) malévolamente",
+    "(Ríe|Ríete|Reír) siniestramente",
+    "(Ríe|Ríete|Reír) como un (diablo|demonio)",
+    "¿Por qué no te ríes?",
+    "No te rías",
+    "¿Qué te impide reír?",
+    "¿Por qué no te ríes?",
+    "Muéstrame cómo te ríes",
+    "Me gustaría que te rieras",
+    "¿Te gusta reír?",
+    "Quiero que te rías",
+    "(Ríe|Ríete) un poco"
+  ],
+  "/vocab/haunted.intent": [
+    "¿Estás (poseído|embrujado|poseída|embrujada|hechizado|hechizada?)",
+    "¿Necesitas un exorcismo?"
+  ]
 }
