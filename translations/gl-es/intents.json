@@ -1,16 +1,31 @@
 {
-    "/vocab/RandomLaugh.intent": [
-        "rir ao chou",
-        "(risa|riso|risos|risada) ao chou",
-        "activar (risa|riso|risos|risada) ao chou"
-    ],
-    "/vocab/Laugh.intent": [
-        "podes rir",
-        "(risa|riso|risos|risada) (malvada|malvado|malvados)",
-        "rir como alexa"
-    ],
-    "/vocab/haunted.intent": [
-        "Tes un meigallo?",
-        "Precisas dun exorcismo?"
-    ]
+  "/vocab/RandomLaugh.intent": [
+    "rir ao chou",
+    "activar (risa|riso|risos|risada) ao chou",
+    "(risa|riso|risos|risada) ao chou",
+    "rir de xeito imprevisible",
+    "activar unha risa aleatoria",
+    "configurar o riso en modo aleatorio"
+  ],
+  "/vocab/Laugh.intent": [
+    "rir como alexa",
+    "Podes rir?",
+    "(risa|riso|risos|risada) (malvada|malvado|malvados)",
+    "rir malevolamente",
+    "rir sinistramente",
+    "rir coma un (diaño|demo)",
+    "Por que non ris?",
+    "Non ris?",
+    "Que che impide rir?",
+    "por que non estás rindo?",
+    "móstrame como ris",
+    "gustaríame que rises",
+    "Gústache rir?",
+    "quero que rías",
+    "ri un chisco"
+  ],
+  "/vocab/haunted.intent": [
+    "Tes un meigallo?",
+    "Precisas dun exorcismo?"
+  ]
 }
