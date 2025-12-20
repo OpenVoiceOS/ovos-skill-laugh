@@ -19,7 +19,7 @@
     "pip_spec": "ovos-skill-laugh",
     "license": "Apache-2.0",
     "author": "OpenVoiceOS",
-    "version": "0.2.3a4",
+    "version": "0.2.3a5",
     "url": "https://github.com/openvoiceos/ovos-skill-laugh",
     "skill_id": "ovos-skill-laugh.openvoiceos=ovos_skill_laugh:LaughSkill",
     "skillname": "ovos-skill-laugh",
