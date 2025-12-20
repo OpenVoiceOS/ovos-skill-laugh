@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.3a5](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.3a5) (2025-12-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.3a4...0.2.3a5)
+
+**Merged pull requests:**
+
+- Configure Renovate [\#63](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/63) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [0.2.3a4](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.3a4) (2025-05-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.3a3...0.2.3a4)
