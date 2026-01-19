@@ -3,16 +3,16 @@
     "grin tilfældigt",
     "trigger tilfældig (latter|grin)",
     "tilfældig (latter|grin)",
-    null,
-    null,
+    "grin uforudsigeligt",
+    "udløs et tilfældigt grin",
     "sæt grin til tilfældig tilstand"
   ],
   "/vocab/Laugh.intent": [
     "Grin ligesom Alexa",
     "kan du grine",
     "ond (latter|grin|grine)",
-    null,
-    null,
+    "grin ondsindet",
+    "grin uhyggeligt",
     "le som en (djævel|dæmon)",
     "hvorfor griner du ikke",
     "griner du ikke",
@@ -22,7 +22,7 @@
     "Jeg vil gerne have dig til at grine",
     "kan du lide at grine",
     "Jeg vil have dig til at grine",
-    null
+    "grin lidt"
   ],
   "/vocab/haunted.intent": [
     "er du (besat|hjemsøgt)",
