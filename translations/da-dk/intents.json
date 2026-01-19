@@ -2,15 +2,30 @@
   "/vocab/RandomLaugh.intent": [
     "grin tilfældigt",
     "trigger tilfældig (latter|grin)",
-    "tilfældig (latter|grin)"
+    "tilfældig (latter|grin)",
+    null,
+    null,
+    "sæt grin til tilfældig tilstand"
   ],
   "/vocab/Laugh.intent": [
     "Grin ligesom Alexa",
     "kan du grine",
-    "ond (latter|grin|grine)"
+    "ond (latter|grin|grine)",
+    null,
+    null,
+    "le som en (djævel|dæmon)",
+    "hvorfor griner du ikke",
+    "griner du ikke",
+    "hvad der forhindrer dig i at grine",
+    "hvorfor ler du ikke",
+    "vis mig, hvordan du griner",
+    "Jeg vil gerne have dig til at grine",
+    "kan du lide at grine",
+    "Jeg vil have dig til at grine",
+    null
   ],
   "/vocab/haunted.intent": [
-    "Er du hjemsøgt",
-    "Har du brug for en eksorcisme"
+    "er du (besat|hjemsøgt)",
+    "har du brug for en eksorcisme"
   ]
 }
