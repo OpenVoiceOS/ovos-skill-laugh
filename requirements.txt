@@ -2,4 +2,3 @@ ovos-utils
 ovos-workshop
 ovos-plugin-manager
 ovos-audio
-ovos-bus-client>=1.0.1
