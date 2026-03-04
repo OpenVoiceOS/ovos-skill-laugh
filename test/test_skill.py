@@ -49,7 +49,9 @@ class TestLaughSkill:
             assert test_skill.special_day() == expected
 
     def test_laugh(self, test_skill: LaughSkill, monkeypatch):
-        mock_choice = Mock(return_value="test_sound.wav")
+        monkeypatch.setitem(test_skill.sounds, test_skill.gender, ["test_sound.wav"])
+        monkeypatch.setitem(test_skill.images, test_skill.gender, ["test_image.jpg"])
+        mock_choice = Mock(side_effect=["test_sound.wav", "test_image.jpg"])
         monkeypatch.setattr(random, "choice", mock_choice)
 
         mock_clear = Mock()
@@ -61,9 +63,27 @@ class TestLaughSkill:
 
         test_skill.laugh()
 
-        mock_choice.assert_called_once_with(test_skill.sounds[test_skill.gender])
+        assert mock_choice.call_count == 2
+        mock_choice.assert_any_call(["test_sound.wav"])
+        mock_choice.assert_any_call(["test_image.jpg"])
         mock_clear.assert_called()
-        mock_show_image.assert_called_once()
+        mock_show_image.assert_called_once_with("test_image.jpg")
+        mock_play_audio.assert_called_once_with("test_sound.wav")
+
+    def test_laugh_no_images(self, test_skill: LaughSkill, monkeypatch):
+        monkeypatch.setitem(test_skill.sounds, test_skill.gender, ["test_sound.wav"])
+        monkeypatch.setitem(test_skill.images, test_skill.gender, [])
+        mock_choice = Mock(return_value="test_sound.wav")
+        monkeypatch.setattr(random, "choice", mock_choice)
+
+        mock_show_image = Mock()
+        mock_play_audio = Mock()
+        monkeypatch.setattr(test_skill.gui, "show_image", mock_show_image)
+        monkeypatch.setattr(test_skill, "play_audio", mock_play_audio)
+
+        test_skill.laugh()
+
+        mock_show_image.assert_not_called()
         mock_play_audio.assert_called_once_with("test_sound.wav")
 
     def test_handle_haunted_intent(self, test_skill: LaughSkill, reset_skill_mocks):
@@ -101,6 +121,52 @@ class TestLaughSkill:
         test_skill.random_laugh = True
         test_skill.handle_laugh_event(Message(""))
         mock_cancel_scheduled_event.assert_called_once_with("random_laugh")
+
+    def test_handle_random_intent(
+        self, test_skill: LaughSkill, reset_skill_mocks, monkeypatch
+    ):
+        mock_cancel = Mock()
+        mock_schedule = Mock()
+        monkeypatch.setattr(test_skill, "cancel_scheduled_event", mock_cancel)
+        monkeypatch.setattr(test_skill, "schedule_event", mock_schedule)
+
+        test_skill.handle_random_intent(Message(""))
+        assert test_skill.random_laugh is True
+        mock_cancel.assert_called_with("random_laugh")
+
+    def test_halt_laughing_not_in_random_mode(
+        self, test_skill: LaughSkill, reset_skill_mocks, monkeypatch
+    ):
+        monkeypatch.setattr(test_skill, "random_laugh", False)
+        monkeypatch.setattr(test_skill, "special_day", Mock(return_value=False))
+        test_skill.halt_laughing(Message(""))
+        test_skill.speak_dialog.assert_called_once_with("cancel_fail")
+
+    def test_halt_laughing_on_special_day(
+        self, test_skill: LaughSkill, reset_skill_mocks, monkeypatch
+    ):
+        monkeypatch.setattr(test_skill, "random_laugh", True)
+        monkeypatch.setattr(test_skill, "special_day", Mock(return_value=True))
+        test_skill.halt_laughing(Message(""))
+        test_skill.speak_dialog.assert_called_once_with("cancel_fail")
+
+    def test_handle_laugh_event_noop_when_not_random(
+        self, test_skill: LaughSkill, reset_skill_mocks, monkeypatch
+    ):
+        mock_cancel = Mock()
+        monkeypatch.setattr(test_skill, "cancel_scheduled_event", mock_cancel)
+        test_skill.random_laugh = False
+        test_skill.handle_laugh_event(None)
+        mock_cancel.assert_not_called()
+        test_skill.play_audio.assert_not_called()
+
+    def test_handle_homescreen(
+        self, test_skill: LaughSkill, reset_skill_mocks, monkeypatch
+    ):
+        mock_laugh = Mock()
+        monkeypatch.setattr(test_skill, "laugh", mock_laugh)
+        test_skill.handle_homescreen(Message(""))
+        mock_laugh.assert_called_once()
 
     def test_shutdown(self, test_skill: LaughSkill):
         test_skill.shutdown()
