@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.1a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.1a1) (2026-03-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.0a4...1.0.1a1)
+
+**Merged pull requests:**
+
+- fix: move gui images under gui/all/ per OVOS framework spec [\#78](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/78) ([mikejgray](https://github.com/mikejgray))
+
+## [1.0.0a4](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.0a4) (2026-03-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.0a3...1.0.0a4)
+
 ## [1.0.0a3](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.0a3) (2026-03-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.0a2...1.0.0a3)
