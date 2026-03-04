@@ -19,7 +19,7 @@
     "pip_spec": "ovos-skill-laugh",
     "license": "Apache-2.0",
     "author": "OpenVoiceOS",
-    "version": "1.0.0a4",
+    "version": "1.0.1a1",
     "url": "https://github.com/openvoiceos/ovos-skill-laugh",
     "skill_id": "ovos-skill-laugh.openvoiceos=ovos_skill_laugh:LaughSkill",
     "skillname": "ovos-skill-laugh",
@@ -30,8 +30,7 @@
             "ovos-utils",
             "ovos-workshop",
             "ovos-plugin-manager",
-            "ovos-audio",
-            "ovos-bus-client>=1.0.1"
+            "ovos-audio"
         ],
         "system": {},
         "skill": []
