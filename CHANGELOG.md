@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.2a1) (2026-03-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.1a1...1.0.2a1)
+
+**Merged pull requests:**
+
+- fix: drop explicit ovos-bus-client pin from requirements [\#82](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/82) ([mikejgray](https://github.com/mikejgray))
+
 ## [1.0.1a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.1a1) (2026-03-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.0a4...1.0.1a1)
