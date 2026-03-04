@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.0a3](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.0a3) (2026-03-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.0a2...1.0.0a3)
+
+## [1.0.0a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.0a2) (2026-03-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.0a1...1.0.0a2)
+
+**Merged pull requests:**
+
+- Update stefanzweifel/git-auto-commit-action action to v7 [\#70](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/70) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/setup-python action to v6 [\#69](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/69) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v6 [\#68](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/68) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [1.0.0a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.0a1) (2026-03-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.3a6...1.0.0a1)
