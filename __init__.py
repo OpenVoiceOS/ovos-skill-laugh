@@ -70,7 +70,7 @@ class LaughSkill(OVOSSkill):
             else:
                 self.log.warning("Sounds directory does not exist: %s", sounds_dir)
 
-            img_dir = join(dirname(__file__), "gui", gender)
+            img_dir = join(dirname(__file__), "gui", "all", gender)
             if isdir(img_dir):
                 self.images[gender] = [
                     join(img_dir, f)
