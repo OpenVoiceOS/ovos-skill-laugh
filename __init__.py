@@ -57,11 +57,11 @@ class LaughSkill(OVOSSkill):
         """Initialize the skill."""
         self.random_laugh = False
         self.sounds = {"male": [], "female": [], "robot": []}
+        self.images: dict = {"male": [], "female": [], "robot": []}
 
-        # Example adjustment: Verifying sound directories exist before populating `sounds`
         for gender in ["male", "female", "robot"]:
             sounds_dir = join(self.sounds_dir, gender)
-            if isdir(sounds_dir):  # Ensure the directory exists
+            if isdir(sounds_dir):
                 self.sounds[gender] = [
                     join(sounds_dir, sound)
                     for sound in listdir(sounds_dir)
@@ -69,6 +69,16 @@ class LaughSkill(OVOSSkill):
                 ]
             else:
                 self.log.warning("Sounds directory does not exist: %s", sounds_dir)
+
+            img_dir = join(dirname(__file__), "gui", gender)
+            if isdir(img_dir):
+                self.images[gender] = [
+                    join(img_dir, f)
+                    for f in listdir(img_dir)
+                    if f.lower().endswith((".jpg", ".jpeg", ".png", ".gif"))
+                ]
+            if not self.images[gender]:
+                self.log.warning("No images found for gender: %s", gender)
         # stop laughs for speech execution
         self.add_event("speak", self.stop)
 
@@ -93,11 +103,15 @@ class LaughSkill(OVOSSkill):
 
     def laugh(self):
         """Make the voice assistant laugh."""
+        if not self.sounds[self.gender]:
+            self.log.error("No sounds found for gender: %s", self.gender)
+            return
         sound = random.choice(self.sounds[self.gender])
 
         self.gui.clear()
-        pic = random.randint(0, 3)
-        self.gui.show_image(str(pic) + ".jpg")
+        if self.images[self.gender]:
+            image = random.choice(self.images[self.gender])
+            self.gui.show_image(image)
         self.play_audio(sound)
         self.gui.clear()
 
