@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.0a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.0a1) (2026-03-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.3a6...1.0.0a1)
+
+**Breaking changes:**
+
+- feat!: gender-specific GUI images [\#74](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/74) ([mikejgray](https://github.com/mikejgray))
+
+**Closed issues:**
+
+- different images per voice [\#15](https://github.com/OpenVoiceOS/ovos-skill-laugh/issues/15)
+
 ## [0.2.3a6](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/0.2.3a6) (2026-01-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/0.2.3a5...0.2.3a6)
