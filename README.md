@@ -7,7 +7,7 @@
 
 Makes your voice assistant laugh like a maniac
 
-![A ghostly face, laughing evilly.](./gui/male/2.jpg)
+![A ghostly face, laughing evilly.](./gui/all/male/2.jpg)
 
 ## About
 
