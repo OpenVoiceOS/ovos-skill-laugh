@@ -1,0 +1,15 @@
+{
+	"title": "Laugh",
+	"url": "https://github.com/OpenVoiceOS/ovos-skill-laugh",
+	"description": "Riu aleatòriament o quan se li demana",
+	"examples": [
+    	"riu com l'Alexa",
+    	"pots riure?"
+	],
+	"tags": [
+    	"riure",
+    	"divertit",
+    	"entreteniment",
+    	"repetir"
+	]
+}
