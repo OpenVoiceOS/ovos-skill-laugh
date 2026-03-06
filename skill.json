@@ -1,7 +1,7 @@
 {
     "title": "ovos-skill-laugh",
     "icon": "res/icon/laugh_icon.png",
-    "summary": "![Python](https://img.shields.io/badge/python-3.10-blue.svg) ![Python](https://img.shields.io/badge/python-3.11-blue.svg) ![Python](https://img.shields.io/badge/python-3.12-blue.svg) ![Python](https://img.shields.io/badge/python-3.13-blue.svg) Makes your voice assistant laugh like a maniac ![A ghostly face, laughing evilly.](./gui/male/2.jpg)",
+    "summary": "![Python](https://img.shields.io/badge/python-3.10-blue.svg) ![Python](https://img.shields.io/badge/python-3.11-blue.svg) ![Python](https://img.shields.io/badge/python-3.12-blue.svg) ![Python](https://img.shields.io/badge/python-3.13-blue.svg) Makes your voice assistant laugh like a maniac ![A ghostly face, laughing evilly.](./gui/all/male/2.jpg)",
     "description": "Laugh randomly or when requested.",
     "examples": [
         "Laugh like Alexa",
@@ -19,7 +19,7 @@
     "pip_spec": "ovos-skill-laugh",
     "license": "Apache-2.0",
     "author": "OpenVoiceOS",
-    "version": "1.0.1a1",
+    "version": "1.0.2a1",
     "url": "https://github.com/openvoiceos/ovos-skill-laugh",
     "skill_id": "ovos-skill-laugh.openvoiceos=ovos_skill_laugh:LaughSkill",
     "skillname": "ovos-skill-laugh",
@@ -48,5 +48,5 @@
     ],
     "branch": "master",
     "foldername": null,
-    "short_description": "![Python](https://img.shields.io/badge/python-3.10-blue.svg) ![Python](https://img.shields.io/badge/python-3.11-blue.svg) ![Python](https://img.shields.io/badge/python-3.12-blue.svg) ![Python](https://img.shields.io/badge/python-3.13-blue.svg) Makes your voice assistant laugh like a maniac ![A ghostly face, laughing evilly.](./gui/male/2.jpg)"
+    "short_description": "![Python](https://img.shields.io/badge/python-3.10-blue.svg) ![Python](https://img.shields.io/badge/python-3.11-blue.svg) ![Python](https://img.shields.io/badge/python-3.12-blue.svg) ![Python](https://img.shields.io/badge/python-3.13-blue.svg) Makes your voice assistant laugh like a maniac ![A ghostly face, laughing evilly.](./gui/all/male/2.jpg)"
 }
