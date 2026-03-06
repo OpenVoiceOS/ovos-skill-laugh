@@ -15,12 +15,12 @@ jobs:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Sync skill.json
         run: |
           cp skill.json locale/en-us/skill.json
       - name: Push skill.json Change
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: Sync skill.json
           file_pattern: "locale/skill.json"
