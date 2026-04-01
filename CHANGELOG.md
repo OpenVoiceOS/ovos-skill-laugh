@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.5a4](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a4) (2026-04-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5a2...1.0.5a4)
+
+**Merged pull requests:**
+
+- translate\(fa-IR\): update yes.dialog [\#97](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/97) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(fa-IR\): update cancel\_fail.dialog [\#94](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/94) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(fa-IR\): update RandomLaugh.intent [\#93](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/93) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [1.0.5a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a2) (2026-04-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.4a1...1.0.5a2)
