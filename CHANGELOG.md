@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.5a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a2) (2026-04-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.4a1...1.0.5a2)
+
+**Merged pull requests:**
+
+- translate\(fa-IR\): update haunted.intent [\#95](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/95) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- Polish French laugh locale [\#91](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/91) ([goldyfruit](https://github.com/goldyfruit))
+
 ## [1.0.4a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.4a1) (2026-03-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.3a3...1.0.4a1)
