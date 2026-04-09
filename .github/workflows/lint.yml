@@ -1,0 +1,15 @@
+name: Lint
+
+on:
+  pull_request:
+    branches: [dev, master, main]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    uses: OpenVoiceOS/gh-automations/.github/workflows/lint.yml@dev
+    secrets: inherit
+    with:
+      ruff: true
+      ruff_args: '. --exclude _gh_automations'
+      pre_commit: false   # set true if .pre-commit-config.yaml exists
