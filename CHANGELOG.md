@@ -1,8 +1,21 @@
 # Changelog
 
+## [1.0.5a5](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a5) (2026-04-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5a4...1.0.5a5)
+
+**Merged pull requests:**
+
+- chore: migrate to OVOS standard workflows [\#102](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/102) ([mikejgray](https://github.com/mikejgray))
+- translate\(fa-IR\): update maybe.dialog [\#96](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/96) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [1.0.5a4](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a4) (2026-04-01)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5a2...1.0.5a4)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5a3...1.0.5a4)
+
+## [1.0.5a3](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a3) (2026-04-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5a2...1.0.5a3)
 
 **Merged pull requests:**
 
