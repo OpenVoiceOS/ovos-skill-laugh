@@ -1,8 +1,8 @@
 # Changelog
 
-## [1.0.5a5](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a5) (2026-04-09)
+## [1.0.5a6](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a6) (2026-04-09)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5a4...1.0.5a5)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5a4...1.0.5a6)
 
 **Merged pull requests:**
 
