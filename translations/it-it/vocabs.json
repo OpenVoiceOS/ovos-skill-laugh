@@ -1,13 +1,7 @@
 {
-    "/vocab/Stop.voc": [
-        "interrompi",
-        "cancella",
-        "ferma"
-    ],
-    "/vocab/Laugh.voc": [
-        "ridi",
-        "ridendo",
-        "risate",
-        "risata"
-    ]
+  "/vocab/Stop.voc": [
+    "interrompi",
+    "cancella",
+    "ferma"
+  ]
 }
