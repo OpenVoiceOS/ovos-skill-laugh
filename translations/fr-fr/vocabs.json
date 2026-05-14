@@ -1,7 +1,13 @@
 {
+  "/vocab/Laugh.voc": [
+    "rire",
+    "rigoler"
+  ],
   "/vocab/Stop.voc": [
     "abandonne",
     "annule",
-    "(stop|arrête|c'est pas drôle)"
+    "arrête",
+    "ce n'est pas drôle",
+    "stop"
   ]
 }

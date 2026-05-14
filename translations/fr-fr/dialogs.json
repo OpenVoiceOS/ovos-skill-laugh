@@ -1,17 +1,17 @@
 {
   "/dialog/cancel_fail.dialog": [
-    "ça ne me fait pas rire"
+    "je ne suis pas en train de rire"
   ],
   "/dialog/yes.dialog": [
-    "Oui"
+    "oui, absolument"
   ],
   "/dialog/cancel.dialog": [
-    "rire arrêté",
-    "je ne rirais plus"
+    "d'accord, j'arrête de rire",
+    "c'est bon, je m'arrête"
   ],
   "/dialog/maybe.dialog": [
-    "Non",
-    "peut être",
+    "non",
+    "peut-être",
     "qui sait"
   ]
 }

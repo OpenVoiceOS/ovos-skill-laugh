@@ -1,16 +1,42 @@
 {
   "/vocab/RandomLaugh.intent": [
-    "(ris|rigole) aléatoirement",
-    "(active le|) rire aléatoire",
-    "rire aléatoire"
+    "active le mode rire aléatoire",
+    "active le rire aléatoire",
+    "déclenche un rire aléatoire",
+    "fais des rires aléatoires",
+    "fais un rire au hasard",
+    "lance un rire aléatoire",
+    "rigole au hasard",
+    "rire aléatoire",
+    "rires aléatoires",
+    "ris aléatoirement",
+    "ris au hasard",
+    "surprends-moi avec un rire"
   ],
   "/vocab/Laugh.intent": [
-    "(ris|rigole) comme alexa",
-    "peux tu (rire|rigoler) ?",
-    "(ricane|rire démoniaque|rire sadique)"
+    "fais un rire démoniaque",
+    "fais un rire diabolique",
+    "fais un rire maléfique",
+    "fais un rire sinistre",
+    "j'aimerais que tu ries",
+    "je veux que tu ries",
+    "montre-moi ton rire",
+    "peux-tu rire",
+    "peux-tu rigoler",
+    "pourquoi tu ne ris pas",
+    "qu'est-ce qui t'empêche de rire",
+    "ricane un peu",
+    "rigole",
+    "ris",
+    "ris comme Alexa",
+    "ris méchamment",
+    "ris un peu",
+    "tu aimes rire",
+    "tu peux rire"
   ],
   "/vocab/haunted.intent": [
-    "Es-tu hanté?",
-    "As-tu besoin d'un exorcisme"
+    "as-tu besoin d'un exorcisme",
+    "es-tu hanté",
+    "es-tu possédé"
   ]
 }
