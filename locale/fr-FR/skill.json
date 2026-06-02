@@ -1,0 +1,14 @@
+{
+  "title": "Rire",
+  "url": "https://github.com/OpenVoiceOS/ovos-skill-laugh",
+  "description": "Demandez à votre assistant vocal de rire sur commande ou de manière aléatoire.",
+  "examples": [
+    "Ris comme Alexa",
+    "Peux-tu rire ?"
+  ],
+  "tags": [
+    "rire",
+    "divertissement",
+    "assistant vocal"
+  ]
+}
