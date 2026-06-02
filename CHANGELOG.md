@@ -1,68 +1,12 @@
 # Changelog
 
-## [1.0.5a6](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a6) (2026-04-09)
+## [1.0.6a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.6a1) (2026-06-02)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5a4...1.0.5a6)
-
-**Merged pull requests:**
-
-- chore: migrate to OVOS standard workflows [\#102](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/102) ([mikejgray](https://github.com/mikejgray))
-- translate\(fa-IR\): update maybe.dialog [\#96](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/96) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-
-## [1.0.5a4](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a4) (2026-04-01)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5a3...1.0.5a4)
-
-## [1.0.5a3](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a3) (2026-04-01)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5a2...1.0.5a3)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5...1.0.6a1)
 
 **Merged pull requests:**
 
-- translate\(fa-IR\): update yes.dialog [\#97](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/97) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-- translate\(fa-IR\): update cancel\_fail.dialog [\#94](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/94) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-- translate\(fa-IR\): update RandomLaugh.intent [\#93](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/93) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-
-## [1.0.5a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.5a2) (2026-04-01)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.4a1...1.0.5a2)
-
-**Merged pull requests:**
-
-- translate\(fa-IR\): update haunted.intent [\#95](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/95) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-- Polish French laugh locale [\#91](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/91) ([goldyfruit](https://github.com/goldyfruit))
-
-## [1.0.4a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.4a1) (2026-03-24)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.3a3...1.0.4a1)
-
-**Merged pull requests:**
-
-- fix: rename bare lang code locale directories [\#88](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/88) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-
-## [1.0.3a3](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.3a3) (2026-03-06)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.3a2...1.0.3a3)
-
-**Merged pull requests:**
-
-- added italian translation [\#50](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/50) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
-## [1.0.3a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.3a2) (2026-03-06)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.3a1...1.0.3a2)
-
-**Merged pull requests:**
-
-- gl-es/translate [\#71](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/71) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
-
-## [1.0.3a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.3a1) (2026-03-06)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.2...1.0.3a1)
-
-**Merged pull requests:**
-
-- Master [\#84](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/84) ([mikejgray](https://github.com/mikejgray))
+- \[codex\] Polish fr-FR laugh locale [\#105](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/105) ([goldyfruit](https://github.com/goldyfruit))
 
 
 
