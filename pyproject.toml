@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-skill-laugh"
+dynamic = ["version"]
+description = "Make your voice assistant laugh evilly. Beware... it might be haunted!"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "OpenVoiceOS", email = "jarbas@openvoiceos.com"}
+]
+keywords = ["ovos", "skill", "plugin"]
+dependencies = [
+    "ovos-utils>=0.0.38",
+    "ovos-workshop>=0.0.15,<8.0.0",
+    "ovos-plugin-manager",
+    "ovos-audio"
+]
+
+[project.optional-dependencies]
+test = [
+    "ovoscope>=0.13.1,<1.0.0",
+    "pytest>=7.0.0,<9",
+    "pytest-timeout>=2.0.0",
+    "padacioso>=1.0.2a3"
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-skill-laugh"
+
+[project.entry-points."ovos.plugin.skill"]
+"ovos-skill-laugh.openvoiceos" = "ovos_skill_laugh:LaughSkill"
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_skill_laugh.version.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ovos_skill_laugh*"]
+
+[tool.setuptools.package-data]
+ovos_skill_laugh = [
+    "*.json",
+    "locale/**/*",
+    "sounds/**/*",
+    "gui/**/*",
+]
