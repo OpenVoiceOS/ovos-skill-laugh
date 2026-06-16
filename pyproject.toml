@@ -30,7 +30,7 @@ test = [
 [project.urls]
 Homepage = "https://github.com/OpenVoiceOS/ovos-skill-laugh"
 
-[project.entry-points."ovos.plugin.skill"]
+[project.entry-points."opm.skill"]
 "ovos-skill-laugh.openvoiceos" = "ovos_skill_laugh:LaughSkill"
 
 [tool.setuptools.dynamic]
