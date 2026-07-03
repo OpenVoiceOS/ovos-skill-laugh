@@ -13,5 +13,5 @@ jobs:
       python_version: '3.11'
       coverage_source: 'ovos_skill_laugh'
       test_path: 'test/test_skill.py'
-      install_extras: 'test'
+      install_extras: ''
       min_coverage: 0

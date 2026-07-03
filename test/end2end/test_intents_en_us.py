@@ -5,6 +5,10 @@ pipeline and asserts it routes to the expected ``.intent`` handler. Coverage
 spans the on-demand laugh query (bare and the ``laugh like a demon`` variant),
 the random-laugh trigger, and a negative that must reach no handler.
 
+A single MiniCroft is shared across the module so the skill loads once — the
+skill copies its GUI resources into a shared cache on load, and repeated loads
+would race that copy.
+
 Run: pytest test/end2end/ -v
 """
 import os
@@ -35,8 +39,8 @@ def _intent_exists(intent_file: str) -> bool:
     return os.path.isfile(os.path.join(_LOCALE_VOCAB, intent_file))
 
 
-class _IntentRoutingMixin:
-    """Shared MiniCroft setup for padacioso intent routing."""
+class TestLaughIntents(TestCase):
+    """Per-utterance intent routing for the en-US laugh skill."""
 
     @classmethod
     def setUpClass(cls):
@@ -82,26 +86,14 @@ class _IntentRoutingMixin:
                 f"{utterance!r} unexpectedly routed to {intent_file}",
             )
 
-
-class TestLaughIntent(_IntentRoutingMixin, TestCase):
-    """laugh.intent"""
-
     def test_can_you_laugh(self):
         self.assert_matches("can you laugh", "laugh.intent")
 
     def test_laugh_like_a_demon(self):
         self.assert_matches("laugh like a demon", "laugh.intent")
 
-
-class TestRandomLaughIntent(_IntentRoutingMixin, TestCase):
-    """random_laugh.intent"""
-
     def test_laugh_randomly(self):
         self.assert_matches("laugh randomly", "random_laugh.intent")
 
-
-class TestNoMatch(_IntentRoutingMixin, TestCase):
-    """Unrelated utterances must not trigger any laugh handler."""
-
-    def test_unrelated_utterance(self):
+    def test_unrelated_utterance_no_match(self):
         self.assert_no_match("what is the meaning of life")
