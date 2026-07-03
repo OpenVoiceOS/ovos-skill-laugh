@@ -1,10 +1,10 @@
 {
-  "/vocab/RandomLaugh.intent": [
+  "/vocab/random_laugh.intent": [
     "ridi a caso",
     "attiva (risata|risate|risa) a caso",
     "(risate|ridi|risata) a caso"
   ],
-  "/vocab/Laugh.intent": [
+  "/vocab/laugh.intent": [
     "ridi come alexa",
     "puoi ridere?",
     "(risate|ridi|risata) malvagi(a|e)"

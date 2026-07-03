@@ -1,10 +1,10 @@
 {
-    "/vocab/Stop.voc": [
+    "/vocab/stop.voc": [
         "aborta|abortar",
         "cancela|cancelar",
         "para"
     ],
-    "/vocab/Laugh.voc": [
+    "/vocab/laugh.voc": [
         "risa",
         "risa",
         "risas",

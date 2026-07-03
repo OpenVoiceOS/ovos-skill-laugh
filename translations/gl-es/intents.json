@@ -1,5 +1,5 @@
 {
-  "/vocab/RandomLaugh.intent": [
+  "/vocab/random_laugh.intent": [
     "rir ao chou",
     "activar (risa|riso|risos|risada) ao chou",
     "(risa|riso|risos|risada) ao chou",
@@ -7,7 +7,7 @@
     "activar unha risa aleatoria",
     "configurar o riso en modo aleatorio"
   ],
-  "/vocab/Laugh.intent": [
+  "/vocab/laugh.intent": [
     "rir como alexa",
     "Podes rir?",
     "(risa|riso|risos|risada) (malvada|malvado|malvados)",

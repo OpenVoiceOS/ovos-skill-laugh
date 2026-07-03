@@ -1,10 +1,10 @@
 {
-    "/vocab/Stop.voc": [
+    "/vocab/stop.voc": [
         "afbreken",
         "annuleren",
         "stop"
     ],
-    "/vocab/Laugh.voc": [
+    "/vocab/laugh.voc": [
         "lach",
         "lachen",
         "gelach",

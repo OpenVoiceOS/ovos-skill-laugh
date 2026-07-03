@@ -1,5 +1,5 @@
 {
-  "/vocab/RandomLaugh.intent": [
+  "/vocab/random_laugh.intent": [
     "riu (aleatòriament|de forma aleatòria|random)",
     "(fes|executa) (un riure|una rialla) (aleatori|aleatòria|random)",
     "(riure|rialla) (aleatori|aleatòria|random)",
@@ -7,7 +7,7 @@
     "fes un riure aleatori",
     "posa el riure en mode aleatori"
   ],
-  "/vocab/Laugh.intent": [
+  "/vocab/laugh.intent": [
     "riu com (l'|)Alexa",
     "(saps|pots) riure",
     "(riure diabòlic|rialla diabòlica)",

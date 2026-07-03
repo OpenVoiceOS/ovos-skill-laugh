@@ -1,5 +1,5 @@
 {
-  "/vocab/RandomLaugh.intent": [
+  "/vocab/random_laugh.intent": [
     "lache zufällig",
     "löse zufälliges (Lachen|Gelächter) aus",
     "zufälliges (Lachen|Gelächter)",
@@ -7,7 +7,7 @@
     "löse ein zufälliges Lachen aus",
     "Lachen auf Zufallsmodus einstellen"
   ],
-  "/vocab/Laugh.intent": [
+  "/vocab/laugh.intent": [
     "Lache wie Alexa",
     "kannst du lachen",
     "böses (Lachen|Gelächter)",

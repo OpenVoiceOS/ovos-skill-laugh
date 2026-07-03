@@ -1,10 +1,10 @@
 {
-    "/vocab/RandomLaugh.intent": [
+    "/vocab/random_laugh.intent": [
         "(r\u00edete|reir|r\u00ede) al azar",
         "activa una (risa|carcajada|risotada) aleatoria",
         "(risa|carcajada|risotada) aleatoria"
     ],
-    "/vocab/Laugh.intent": [
+    "/vocab/laugh.intent": [
         "r\u00edete como Alexa",
         "\u00bfpuedes re\u00edrte?",
         "(risa|carcajada|risotada) malvada"

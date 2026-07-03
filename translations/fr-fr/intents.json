@@ -1,5 +1,5 @@
 {
-  "/vocab/RandomLaugh.intent": [
+  "/vocab/random_laugh.intent": [
     "active le mode rire aléatoire",
     "active le rire aléatoire",
     "déclenche un rire aléatoire",
@@ -13,7 +13,7 @@
     "ris au hasard",
     "surprends-moi avec un rire"
   ],
-  "/vocab/Laugh.intent": [
+  "/vocab/laugh.intent": [
     "fais un rire démoniaque",
     "fais un rire diabolique",
     "fais un rire maléfique",

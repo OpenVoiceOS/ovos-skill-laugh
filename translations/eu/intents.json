@@ -1,10 +1,10 @@
 {
-    "/vocab/RandomLaugh.intent": [
+    "/vocab/random_laugh.intent": [
         "barre egin ausaz",
         "ausazko (barre|irri|algara|karkara)",
         "eragin ausazko (barre|irri|algara|karkara)"
     ],
-    "/vocab/Laugh.intent": [
+    "/vocab/laugh.intent": [
         "barre egin al dezakezu?",
         "(barre|irri|algara|karkara) maltzurra",
         "barre egin alexa bezala"

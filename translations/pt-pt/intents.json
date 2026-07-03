@@ -1,10 +1,10 @@
 {
-  "/vocab/RandomLaugh.intent": [
+  "/vocab/random_laugh.intent": [
     "(ri|riso|ri te) (aleatoriamente|aleatorio|ocasional|ocasionalmente|as vezes)",
     "[UNUSED]",
     "[UNUSED]"
   ],
-  "/vocab/Laugh.intent": [
+  "/vocab/laugh.intent": [
     "ri como a alexa",
     "faz um riso malvado",
     "risada malefica"

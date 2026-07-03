@@ -13,7 +13,7 @@ languages:
   - pt-PT
   - sv-SE
 vocab:
-  - Stop
+  - stop
 dialog:
   - cancel_fail
   - cancel
@@ -22,5 +22,5 @@ dialog:
 intents:
   padatious:
     - haunted.intent
-    - Laugh.intent
-    - RandomLaugh.intent
+    - laugh.intent
+    - random_laugh.intent

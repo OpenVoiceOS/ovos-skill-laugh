@@ -123,19 +123,19 @@ class LaughSkill(OVOSSkill):
         else:
             self.speak_dialog("maybe")
 
-    @intent_handler("Laugh.intent")
+    @intent_handler("laugh.intent")
     def handle_laugh_intent(self, message: Message) -> None:  # noqa
         """Handle the laugh intent."""
         self.laugh()
 
-    @intent_handler("RandomLaugh.intent")
+    @intent_handler("random_laugh.intent")
     def handle_random_intent(self, message: Message) -> None:  # noqa
         """Initiate random laughing."""
         self.log.info("Laughing skill: Triggering random laughing")
         self.random_laugh = True
         self.handle_laugh_event(message)
 
-    @intent_handler(IntentBuilder("StopLaughing").require("Stop").require("Laugh"))
+    @intent_handler(IntentBuilder("StopLaughing").require("stop").require("laugh"))
     def halt_laughing(self, message: Message) -> None:
         """Stop the random laughing."""
         self.log.info("Laughing skill: Stopping")

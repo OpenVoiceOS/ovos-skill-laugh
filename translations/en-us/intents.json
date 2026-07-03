@@ -1,5 +1,5 @@
 {
-  "/vocab/RandomLaugh.intent": [
+  "/vocab/random_laugh.intent": [
     "laugh randomly",
     "trigger random (laugh|laughing|laughs|laughter)",
     "random (laugh|laughing|laughs|laughter)",
@@ -7,7 +7,7 @@
     "trigger a random laugh",
     "set laugh to random mode"
   ],
-  "/vocab/Laugh.intent": [
+  "/vocab/laugh.intent": [
     "laugh like alexa",
     "can you laugh",
     "evil (laugh|laughing|laughs|laughter)",

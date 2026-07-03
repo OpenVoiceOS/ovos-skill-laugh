@@ -1,5 +1,5 @@
 {
-  "/vocab/RandomLaugh.intent": [
+  "/vocab/random_laugh.intent": [
     "grin tilfældigt",
     "trigger tilfældig (latter|grin)",
     "tilfældig (latter|grin)",
@@ -7,7 +7,7 @@
     "udløs et tilfældigt grin",
     "sæt grin til tilfældig tilstand"
   ],
-  "/vocab/Laugh.intent": [
+  "/vocab/laugh.intent": [
     "Grin ligesom Alexa",
     "kan du grine",
     "ond (latter|grin|grine)",

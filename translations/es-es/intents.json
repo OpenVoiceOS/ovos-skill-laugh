@@ -1,5 +1,5 @@
 {
-  "/vocab/RandomLaugh.intent": [
+  "/vocab/random_laugh.intent": [
     "(ríete|reir|ríe) al azar",
     "activa una (risa|carcajada|risotada) aleatoria",
     "(risa|carcajada|risotada) aleatoria",
@@ -7,7 +7,7 @@
     "activa una risa (aleatoria|al azar)",
     "establece risa en modo aleatorio"
   ],
-  "/vocab/Laugh.intent": [
+  "/vocab/laugh.intent": [
     "(ríe|ríete|reír) como Alexa",
     "¿puedes reírte?",
     "(risa|carcajada|risotada) malvada",
