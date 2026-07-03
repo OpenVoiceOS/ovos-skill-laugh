@@ -5,18 +5,21 @@ pipeline and asserts it routes to the expected ``.intent`` handler. Coverage
 spans the on-demand laugh query (bare and the ``laugh like a demon`` variant),
 the random-laugh trigger, and a negative that must reach no handler.
 
-A single MiniCroft is shared across the module so the skill loads once — the
-skill copies its GUI resources into a shared cache on load, and repeated loads
-would race that copy.
+A single MiniCroft is shared across the class so the skill loads once. The
+skill is pre-configured with ``haunted`` disabled so it does not fire its
+random-laugh GUI side effect on load, keeping the run focused on intent
+routing.
 
 Run: pytest test/end2end/ -v
 """
+import json
 import os
 import time
 from unittest import TestCase
 
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
+from ovos_config.locations import get_xdg_config_save_path
 from ovoscope import get_minicroft
 
 SKILL_ID = "ovos-skill-laugh.openvoiceos"
@@ -44,6 +47,12 @@ class TestLaughIntents(TestCase):
 
     @classmethod
     def setUpClass(cls):
+        settings_path = os.path.join(
+            get_xdg_config_save_path(), "skills", SKILL_ID, "settings.json"
+        )
+        os.makedirs(os.path.dirname(settings_path), exist_ok=True)
+        with open(settings_path, "w") as f:
+            json.dump({"haunted": False}, f)
         cls.minicroft = get_minicroft([SKILL_ID])
 
     @classmethod
