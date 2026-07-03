@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-skill-laugh"
+dynamic = ["version"]
+description = "Makes your voice assistant laugh like a maniac"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "OpenVoiceOS", email = "jarbasai@mailfence.com" }]
+keywords = ["ovos", "skill", "voice assistant"]
+requires-python = ">=3.10"
+dependencies = [
+    "ovos-utils",
+    "ovos-workshop",
+    "ovos-plugin-manager",
+    "ovos-audio",
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-skill-laugh"
+
+[project.optional-dependencies]
+test = [
+    # end-to-end ovoscope suite; padacioso pipeline ships with ovos-workshop
+    "ovoscope>=1.5.0,<2.0.0",
+    "pytest",
+    "pytest-cov",
+]
+
+[project.entry-points."ovos.plugin.skill"]
+"ovos-skill-laugh.openvoiceos" = "ovos_skill_laugh:LaughSkill"
+
+[tool.setuptools]
+packages = ["ovos_skill_laugh"]
+
+[tool.setuptools.package-dir]
+ovos_skill_laugh = "."
+
+[tool.setuptools.package-data]
+ovos_skill_laugh = [
+    "locale/**",
+    "gui/**",
+    "sounds/**",
+    "*.json",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "version.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+
+[tool.coverage.run]
+source = ["ovos_skill_laugh"]
+
+[tool.coverage.report]
+show_missing = true
