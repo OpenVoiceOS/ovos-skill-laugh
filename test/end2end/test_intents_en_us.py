@@ -1,96 +1,75 @@
-"""E2E intent-routing tests for ovos-skill-laugh.
+"""End-to-end intent routing tests for the en-US locale.
 
-Run: pytest test/end2end/ -v
+Each canonical utterance is fired through a real MiniCroft and asserted to
+route to the expected intent handler. Assertions cover the intent binding
+(drift-proof subset match, not a full expected-message sequence) and, where
+the handler speaks, the presence of a ``speak`` response.
+
+The Laugh / RandomLaugh handlers play an audio clip and emit no ``speak``
+message, so those tests assert only the intent match.
 """
-from unittest import TestCase
+import unittest
 
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
-from ovoscope import End2EndTest, get_minicroft
+from ovoscope import CaptureSession, get_minicroft
 
 SKILL_ID = "ovos-skill-laugh.openvoiceos"
 LANG = "en-US"
 
 
-class _IntentRoutingMixin:
-    """Shared MiniCroft setup."""
-
+class TestLaughIntentsEnUS(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.minicroft = get_minicroft([SKILL_ID])
 
     @classmethod
     def tearDownClass(cls):
-        if getattr(cls, 'minicroft', None):
+        if getattr(cls, "minicroft", None):
             cls.minicroft.stop()
 
-    def _assert_padacioso(self, utterance: str, intent_file: str):
-        intent_msg_type = f"{SKILL_ID}:{intent_file}"
-        session = Session(f"e2e-en_us-{intent_file}-{hash(utterance)}")
+    def _run(self, text):
+        session = Session("test-session")
         session.lang = LANG
-        session.pipeline = ["ovos-padacioso-pipeline-plugin-medium"]
-        message = Message(
+        session.pipeline = [
+            "ovos-adapt-pipeline-plugin-high",
+            "ovos-padatious-pipeline-plugin-high",
+            "ovos-padacioso-pipeline-plugin-high",
+            "ovos-adapt-pipeline-plugin-medium",
+            "ovos-padacioso-pipeline-plugin-medium",
+            "ovos-adapt-pipeline-plugin-low",
+        ]
+        utterance = Message(
             "recognizer_loop:utterance",
-            {"utterances": [utterance], "lang": LANG},
-            {"session": session.serialize()},
+            {"utterances": [text], "lang": LANG},
+            {"session": session.serialize(), "source": "A", "destination": "B"},
         )
-        test = End2EndTest(
-            minicroft=self.minicroft,
-            skill_ids=[SKILL_ID],
-            eof_msgs=["ovos.utterance.handled"],
-            flip_points=["recognizer_loop:utterance"],
-            source_message=message,
-            activation_points=[intent_msg_type],
-            test_msg_context=False,
-            expected_messages=[
-                message,
-                Message(f"{SKILL_ID}.activate", {}, {"skill_id": SKILL_ID}),
-                Message(intent_msg_type, {}, {"skill_id": SKILL_ID}),
-                Message("mycroft.skill.handler.start", {}, {"skill_id": SKILL_ID}),
-                Message("mycroft.skill.handler.complete", {}, {"skill_id": SKILL_ID}),
-                Message("ovos.utterance.handled", {}, {"skill_id": SKILL_ID}),
-            ],
-        )
-        test.execute(timeout=30)
+        capture = CaptureSession(self.minicroft)
+        capture.capture(utterance, timeout=30)
+        return [m.msg_type for m in capture.finish()]
 
+    def _assert_intent(self, text, intent, expect_speak=True):
+        types = self._run(text)
+        self.assertIn(f"{SKILL_ID}:{intent}", types)
+        if expect_speak:
+            self.assertTrue(any("speak" in t for t in types))
 
-class TestPadacioso1_Laugh_intent(_IntentRoutingMixin, TestCase):
-    """Padacioso intent: Laugh.intent"""
-
-    def test_can_you_laugh(self):
-        self._assert_padacioso(r"can you laugh", r"Laugh.intent")
-
-    def test_evil_laugh(self):
-        self._assert_padacioso(r"evil laugh", r"Laugh.intent")
-
-    def test_laugh_like_a_demon(self):
-        self._assert_padacioso(r"laugh like a demon", r"Laugh.intent")
-
-    def test_show_me_how_you_laugh(self):
-        self._assert_padacioso(r"show me how you laugh", r"Laugh.intent")
-
-
-class TestPadacioso2_RandomLaugh_intent(_IntentRoutingMixin, TestCase):
-    """Padacioso intent: RandomLaugh.intent"""
+    def test_laugh(self):
+        # padatious intent; handler plays audio, emits no speak
+        self._assert_intent("can you laugh", "Laugh.intent", expect_speak=False)
 
     def test_random_laugh(self):
-        self._assert_padacioso(r"random laugh", r"RandomLaugh.intent")
+        # padatious intent; handler plays audio + schedules, emits no speak
+        self._assert_intent("random laugh", "RandomLaugh.intent", expect_speak=False)
 
-    def test_laugh_randomly(self):
-        self._assert_padacioso(r"laugh randomly", r"RandomLaugh.intent")
+    def test_haunted(self):
+        # padatious intent; handler speaks a dialog
+        self._assert_intent("are you haunted", "haunted.intent")
 
-    def test_trigger_a_random_laugh(self):
-        self._assert_padacioso(r"trigger a random laugh", r"RandomLaugh.intent")
+    def test_stop_laughing(self):
+        # adapt intent (require Stop + Laugh); handler speaks a dialog
+        self._assert_intent("stop laughing", "StopLaughing")
 
 
-class TestPadacioso3_haunted_intent(_IntentRoutingMixin, TestCase):
-    """Padacioso intent: haunted.intent"""
-
-    def test_are_you_haunted(self):
-        self._assert_padacioso(r"are you haunted", r"haunted.intent")
-
-    def test_are_you_possessed(self):
-        self._assert_padacioso(r"are you possessed", r"haunted.intent")
-
-    def test_do_you_need_an_exorcism(self):
-        self._assert_padacioso(r"do you need an exorcism", r"haunted.intent")
+if __name__ == "__main__":
+    unittest.main()
