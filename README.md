@@ -5,18 +5,26 @@
 ![Python](https://img.shields.io/badge/python-3.12-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.13-blue.svg)
 
-Makes your voice assistant laugh like a maniac
+This [OpenVoiceOS](https://github.com/OpenVoiceOS) skill plays a laugh sound through your voice assistant.
 
 ![A ghostly face, laughing evilly.](./gui/all/male/2.jpg)
 
 ## About
 
-Laugh randomly or when requested.
+The skill plays a laugh at random or when you ask for one. It picks a random sound from a set of male, female, or robot laughs.
+
+## Install
+
+```bash
+pip install ovos-skill-laugh
+```
 
 ## Settings
 
-~/.config/ovos/skills/skill-laugh.openvoiceos/settings.json
-~/.config/neon/skills/skill-laugh.openvoiceos/settings.json
+Edit the settings file for your platform:
+
+- `~/.config/ovos/skills/skill-laugh.openvoiceos/settings.json`
+- `~/.config/neon/skills/skill-laugh.openvoiceos/settings.json`
 
 ```js
 {
@@ -31,6 +39,10 @@ Laugh randomly or when requested.
 
 - "Laugh like Alexa"
 - "can you laugh"
+
+## Related projects
+
+- [OpenVoiceOS](https://github.com/OpenVoiceOS) — the org that maintains this skill and the wider voice assistant platform.
 
 ## Credits
 
