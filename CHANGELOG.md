@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.6a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.6a2) (2026-08-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.6a1...1.0.6a2)
+
+**Merged pull requests:**
+
+- chore: drop projen dependencies and deprecated translations [\#111](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/111) ([mikejgray](https://github.com/mikejgray))
+
 ## [1.0.6a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.6a1) (2026-06-02)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5...1.0.6a1)
