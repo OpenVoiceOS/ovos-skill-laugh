@@ -4,6 +4,7 @@
 ![Python](https://img.shields.io/badge/python-3.11-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.12-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.13-blue.svg)
+![Python](https://img.shields.io/badge/python-3.14-blue.svg)
 
 Makes your voice assistant laugh like a maniac
 
