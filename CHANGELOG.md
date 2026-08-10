@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.0a1) (2026-08-10)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.6a2...1.1.0a1)
+
+**Merged pull requests:**
+
+- feat: add ovoscope end2end intent-routing tests [\#108](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/108) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.0.6a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.6a2) (2026-08-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.6a1...1.0.6a2)
