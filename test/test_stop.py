@@ -38,14 +38,12 @@ class TestStopNoSkills(TestCase):
                 Message("stop:global", {}),  # global stop, no active skill
                 Message("mycroft.stop", {}),
 
-                # pipelines reporting if they stopped
-                # no skills loaded, else skills would also report back
-                Message("persona.openvoiceos.stop.response", {"skill_id": "persona.openvoiceos", "result": False}),
-                Message("common_query.openvoiceos.stop.response",
-                        {"skill_id": "common_query.openvoiceos", "result": False}),
-                Message("ovos.common_play.stop.response", {"skill_id": "ovos.common_play", "result": False}),
-                Message("ovos.common_play.stop.response", {"skill_id": "ovos.common_play", "result": False}),
-                # TODO - why duplicate?
+                # the stop pipeline plugin reports itself as an active handler
+                # that was stopped; no skills are loaded so no other
+                # component (persona/common_query/common_play) has anything
+                # registered to report back
+                Message("stop.openvoiceos.stop.response",
+                        {"skill_id": "stop.openvoiceos", "result": False}),
 
                 Message("ovos.utterance.handled", {})
             ]
