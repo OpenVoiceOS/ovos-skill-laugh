@@ -10,4 +10,4 @@ jobs:
     uses: OpenVoiceOS/gh-automations/.github/workflows/repo-health.yml@dev
     secrets: inherit
     with:
-      version_file: 'version.py'
+      version_file: 'ovos_skill_laugh/version.py'
