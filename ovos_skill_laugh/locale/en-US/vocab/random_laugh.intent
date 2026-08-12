@@ -1,12 +1,4 @@
-laugh randomly
-laugh unpredictably
-random laugh
-random laughing
-random laughs
-random laughter
+laugh (randomly|unpredictably)
+random (laugh|laughing|laughs|laughter)
 set laugh to random mode
-trigger a random laugh
-trigger random laugh
-trigger random laughing
-trigger random laughs
-trigger random laughter
+trigger (a |)random (laugh|laughing|laughs|laughter)
