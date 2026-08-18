@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.0a2) (2026-08-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.0a1...1.1.0a2)
+
+**Merged pull requests:**
+
+- Update dependency pytest to v9 [\#114](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/114) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [1.1.0a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.0a1) (2026-08-10)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.6a2...1.1.0a1)
