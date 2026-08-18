@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0a3](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.0a3) (2026-08-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.0a2...1.1.0a3)
+
+**Merged pull requests:**
+
+- translate\(kab-DZ\): update maybe.dialog [\#121](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/121) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [1.1.0a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.0a2) (2026-08-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.0a1...1.1.0a2)
