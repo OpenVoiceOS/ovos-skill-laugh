@@ -1,3 +1,4 @@
-recursive-include locale *
-recursive-include gui *
+recursive-include ovos_skill_laugh/locale *
+recursive-include ovos_skill_laugh/gui *
+recursive-include ovos_skill_laugh/sounds *
 include *.txt

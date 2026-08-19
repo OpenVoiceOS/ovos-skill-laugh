@@ -11,4 +11,4 @@ jobs:
     secrets: inherit
     with:
       package_name: 'ovos_skill_laugh'
-      version_file: 'version.py'
+      version_file: 'ovos_skill_laugh/version.py'
