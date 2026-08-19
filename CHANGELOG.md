@@ -1,44 +1,15 @@
 # Changelog
 
-## [1.1.0a3](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.0a3) (2026-08-18)
+## [1.1.1a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.1a1) (2026-08-19)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.0a2...1.1.0a3)
-
-**Merged pull requests:**
-
-- translate\(kab-DZ\): update maybe.dialog [\#121](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/121) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
-
-## [1.1.0a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.0a2) (2026-08-18)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.0a1...1.1.0a2)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.0...1.1.1a1)
 
 **Merged pull requests:**
 
-- Update dependency pytest to v9 [\#114](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/114) ([renovate[bot]](https://github.com/apps/renovate))
-
-## [1.1.0a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.0a1) (2026-08-10)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.6a2...1.1.0a1)
-
-**Merged pull requests:**
-
-- feat: add ovoscope end2end intent-routing tests [\#108](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/108) ([JarbasAl](https://github.com/JarbasAl))
-
-## [1.0.6a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.6a2) (2026-08-04)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.6a1...1.0.6a2)
-
-**Merged pull requests:**
-
-- chore: drop projen dependencies and deprecated translations [\#111](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/111) ([mikejgray](https://github.com/mikejgray))
-
-## [1.0.6a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.0.6a1) (2026-06-02)
-
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.0.5...1.0.6a1)
-
-**Merged pull requests:**
-
-- \[codex\] Polish fr-FR laugh locale [\#105](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/105) ([goldyfruit](https://github.com/goldyfruit))
+- Master [\#125](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/125) ([mikejgray](https://github.com/mikejgray))
+- Release 1.1.0a3 [\#123](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/123) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Release 1.0.5a6 [\#104](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/104) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Release 1.0.5a5 [\#103](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/103) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 
 
