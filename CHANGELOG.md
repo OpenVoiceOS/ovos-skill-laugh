@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.2a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.2a1) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.1a1...1.1.2a1)
+
+**Merged pull requests:**
+
+- fix: rename bare lang code locale directories [\#126](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/126) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [1.1.1a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.1a1) (2026-08-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.0...1.1.1a1)
