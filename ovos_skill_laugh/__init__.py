@@ -8,7 +8,6 @@ from typing import Literal
 
 from ovos_bus_client.message import Message
 from ovos_workshop.decorators import intent_handler
-from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 
 
@@ -133,7 +132,7 @@ class LaughSkill(OVOSSkill):
         self.random_laugh = True
         self.handle_laugh_event(message)
 
-    @intent_handler(IntentBuilder("StopLaughing").require("stop").require("laugh"))
+    @intent_handler("StopLaughing.intent")
     def halt_laughing(self, message: Message) -> None:
         """Stop the random laughing."""
         self.log.info("Laughing skill: Stopping")
