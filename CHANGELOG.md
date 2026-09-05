@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.3a3](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.3a3) (2026-09-05)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.3a2...1.1.3a3)
+
+**Merged pull requests:**
+
+- test: add golden-utterance e2e suite for en-US [\#116](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/116) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.1.3a2](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.3a2) (2026-09-05)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.3a1...1.1.3a2)
