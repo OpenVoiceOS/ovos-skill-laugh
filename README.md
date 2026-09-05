@@ -5,13 +5,13 @@
 ![Python](https://img.shields.io/badge/python-3.12-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.13-blue.svg)
 
-This [OpenVoiceOS](https://github.com/OpenVoiceOS) skill plays a laugh sound through your voice assistant.
+This [OpenVoiceOS](https://github.com/OpenVoiceOS) skill makes your voice assistant cackle like a haunted, possibly malevolent spirit.
 
 ![A ghostly face, laughing evilly.](./gui/all/male/2.jpg)
 
 ## About
 
-The skill plays a laugh at random or when you ask for one. It picks a random sound from a set of male, female, or robot laughs.
+The skill plays a maniacal, demented laugh at random or when you ask for one. It picks a random sound from a set of male, female, or robot laughs, each crazed enough to make you wonder if the assistant is haunted.
 
 ## Install
 
