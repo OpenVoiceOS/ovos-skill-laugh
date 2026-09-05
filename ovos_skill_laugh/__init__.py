@@ -1,14 +1,13 @@
 # pylint: disable=invalid-name,attribute-defined-outside-init,unused-argument,arguments-differ
 """Make your voice assistant laugh evilly. Beware... it might be haunted!"""
 import random
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from os import listdir
 from os.path import dirname, isdir, join
-from typing import Literal, Optional
+from typing import Literal
 
 from ovos_bus_client.message import Message
 from ovos_workshop.decorators import intent_handler
-from ovos_workshop.intents import IntentBuilder
 from ovos_workshop.skills import OVOSSkill
 
 
@@ -88,18 +87,16 @@ class LaughSkill(OVOSSkill):
 
         self.add_event("skill-laugh.openvoiceos.home", self.handle_homescreen)
 
-    def handle_homescreen(self, message: Message) -> None:  # noqa
+    def handle_homescreen(self, message: Message) -> None:
         """Handle the homescreen event."""
         self.laugh()
 
     def special_day(self):
         """Check if today is a special day for spirits."""
-        today = datetime.today()
-        if today.day == 13 and today.weekday() == 4:
-            return True  # friday the 13th
-        if today.day == 31 and today.month == 10:
-            return True  # halloween
-        return False
+        today = datetime.now(timezone.utc)
+        return (today.day == 13 and today.weekday() == 4) or (
+            today.day == 31 and today.month == 10
+        )
 
     def laugh(self):
         """Make the voice assistant laugh."""
@@ -124,18 +121,18 @@ class LaughSkill(OVOSSkill):
             self.speak_dialog("maybe")
 
     @intent_handler("Laugh.intent")
-    def handle_laugh_intent(self, message: Message) -> None:  # noqa
+    def handle_laugh_intent(self, message: Message) -> None:
         """Handle the laugh intent."""
         self.laugh()
 
     @intent_handler("RandomLaugh.intent")
-    def handle_random_intent(self, message: Message) -> None:  # noqa
+    def handle_random_intent(self, message: Message) -> None:
         """Initiate random laughing."""
         self.log.info("Laughing skill: Triggering random laughing")
         self.random_laugh = True
         self.handle_laugh_event(message)
 
-    @intent_handler(IntentBuilder("StopLaughing").require("Stop").require("Laugh"))
+    @intent_handler("StopLaughing.intent")
     def halt_laughing(self, message: Message) -> None:
         """Stop the random laughing."""
         self.log.info("Laughing skill: Stopping")
@@ -149,7 +146,7 @@ class LaughSkill(OVOSSkill):
         else:
             self.speak_dialog("cancel_fail")
 
-    def handle_laugh_event(self, message: Optional[Message]) -> None:
+    def handle_laugh_event(self, message: Message | None) -> None:
         """Create a scheduled event for random laughing."""
         if not self.random_laugh:
             return
@@ -158,6 +155,6 @@ class LaughSkill(OVOSSkill):
         self.cancel_scheduled_event("random_laugh")
         self.schedule_event(
             self.handle_laugh_event,
-            datetime.now() + timedelta(seconds=random.randrange(200, 10800)),
+            datetime.now(timezone.utc) + timedelta(seconds=random.randrange(200, 10800)),
             name="random_laugh",
         )
