@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.3a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.3a1) (2026-09-05)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.2a1...1.1.3a1)
+
+**Merged pull requests:**
+
+- fix: allow ovos-workshop 9.x [\#119](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/119) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.1.2a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.2a1) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.1a1...1.1.2a1)
