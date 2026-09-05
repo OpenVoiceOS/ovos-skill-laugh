@@ -185,7 +185,7 @@ class TestStopWithLaughSkill(TestCase):
             f"❌ bare 'stop' was shadowed by the laugh skill's own intent: {msg_types}"
         )
 
-        # belt-and-suspenders: even with only the skill's own adapt intent
+        # even with only the skill's own adapt intent
         # in the pipeline (no stop-pipeline plugin to win on priority), a
         # bare "stop" still must not match "StopLaughing" - it requires
         # both the "Stop" and "Laugh" vocabs, and "stop" alone has no
