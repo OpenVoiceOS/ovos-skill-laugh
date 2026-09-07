@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.4a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.4a1) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.3a3...1.1.4a1)
+
+**Merged pull requests:**
+
+- fix: modernize stop-pipeline tests to renamed/instrumented message flow [\#120](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/120) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.1.3a3](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.3a3) (2026-09-05)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.3a2...1.1.3a3)
