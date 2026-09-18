@@ -188,7 +188,7 @@ class TestStopWithLaughSkill(TestCase):
         # even with only the skill's own adapt intent
         # in the pipeline (no stop-pipeline plugin to win on priority), a
         # bare "stop" still must not match "StopLaughing" - it requires
-        # both the "Stop" and "Laugh" vocabs, and "stop" alone has no
+        # both the "stop" and "laugh" vocabs, and "stop" alone has no
         # "laugh" in it
         adapt_only_msg_types = self._run("stop", ["ovos-adapt-pipeline-plugin-high"])
         self.assertFalse(

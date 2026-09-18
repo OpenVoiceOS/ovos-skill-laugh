@@ -76,3 +76,6 @@ dmypy.json
 .pyre/
 .pytype/
 cython_debug/
+.msg.txt
+.body.md
+install*.log
