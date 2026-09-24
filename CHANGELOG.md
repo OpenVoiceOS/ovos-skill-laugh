@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/2.0.0a1) (2026-09-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.4a1...2.0.0a1)
+
+**Breaking changes:**
+
+- feat!: OVOS-INTENT-2 base names \(supersedes \#117, \#131\) [\#133](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/133) ([mikejgray](https://github.com/mikejgray))
+
+**Merged pull requests:**
+
+- fix\(da-DK\): grammatical gender agreement and awkward phrasing [\#130](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/130) ([andlo](https://github.com/andlo))
+
 ## [1.1.4a1](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/1.1.4a1) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/1.1.3a3...1.1.4a1)
