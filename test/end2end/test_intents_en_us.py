@@ -5,7 +5,7 @@ route to the expected intent handler. Assertions cover the intent binding
 (drift-proof subset match, not a full expected-message sequence) and, where
 the handler speaks, the presence of a ``speak`` response.
 
-The Laugh / RandomLaugh handlers play an audio clip and emit no ``speak``
+The laugh.intent / random_laugh.intent handlers play an audio clip and emit no ``speak``
 message, so those tests assert only the intent match.
 """
 import re
@@ -22,7 +22,7 @@ LANG = "en-US"
 
 def _matches_intent(msg_type: str, skill_id: str, intent_file: str) -> bool:
     """Check whether ``msg_type`` is the matched-intent event for
-    ``intent_file`` (eg. ``Laugh.intent``), tolerant of which pipeline
+    ``intent_file`` (eg. ``laugh.intent``), tolerant of which pipeline
     plugin matched it.
 
     Different pipeline plugins (padatious vs padacioso) register intents
@@ -85,11 +85,11 @@ class TestLaughIntentsEnUS(unittest.TestCase):
 
     def test_laugh(self):
         # padatious intent; handler plays audio, emits no speak
-        self._assert_intent("can you laugh", "Laugh.intent", expect_speak=False)
+        self._assert_intent("can you laugh", "laugh.intent", expect_speak=False)
 
     def test_random_laugh(self):
         # padatious intent; handler plays audio + schedules, emits no speak
-        self._assert_intent("random laugh", "RandomLaugh.intent", expect_speak=False)
+        self._assert_intent("random laugh", "random_laugh.intent", expect_speak=False)
 
     @pytest.mark.xfail(
         reason=(
