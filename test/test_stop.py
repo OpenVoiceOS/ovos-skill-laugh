@@ -29,7 +29,7 @@ def assert_ordered_subsequence(testcase, msg_types, expected_subsequence):
 
 def _matches_intent(msg_type: str, skill_id: str, intent_file: str) -> bool:
     """Check whether ``msg_type`` is the matched-intent event for
-    ``intent_file`` (eg. ``StopLaughing``), tolerant of the ``.intent``
+    ``intent_file`` (eg. ``stop_laughing``), tolerant of the ``.intent``
     suffix some pipeline plugins keep and others strip.
     """
     prefix = f"{skill_id}:"
@@ -126,12 +126,16 @@ class TestStopNoSkills(TestCase):
 
 
 class TestStopWithLaughSkill(TestCase):
-    """The laugh skill stops random laughing via its own ``StopLaughing``
-    adapt intent (requires both the ``Stop`` and ``Laugh`` vocabs), not via
-    a killable/``stop()``-based handler. That intent needs the word "laugh"
-    alongside "stop", so it cannot match a bare "stop" utterance and does
-    not shadow the vanilla global stop.
+    """The laugh skill stops random laughing via its own ``stop_laughing``
+    intent, not via a killable/``stop()``-based handler. Every sample of that
+    intent names the laughing, so it cannot match a bare "stop" utterance and
+    does not shadow the vanilla global stop.
     """
+
+    INTENT_PIPELINE = [
+        "ovos-padatious-pipeline-plugin-high",
+        "ovos-padacioso-pipeline-plugin-high",
+    ]
 
     SKILL_ID = "ovos-skill-laugh.openvoiceos"
 
@@ -166,12 +170,12 @@ class TestStopWithLaughSkill(TestCase):
         return [m.msg_type for m in messages]
 
     def test_vanilla_stop_not_shadowed_by_laugh(self):
-        # the stop pipeline plugin runs alongside the skill's own adapt
-        # intent; a bare "stop" must still reach the global stop pipeline
-        # and must NOT be caught by the laugh skill's "StopLaughing" intent
+        # the stop pipeline plugin runs alongside the skill's own intent; a
+        # bare "stop" must still reach the global stop pipeline and must NOT
+        # be caught by the laugh skill's "stop_laughing" intent
         msg_types = self._run(
             "stop",
-            ["ovos-stop-pipeline-plugin-high", "ovos-adapt-pipeline-plugin-high"],
+            ["ovos-stop-pipeline-plugin-high"] + self.INTENT_PIPELINE,
         )
 
         # accept either the current "ovos.stop" topic or its pre-rename
@@ -181,26 +185,24 @@ class TestStopWithLaughSkill(TestCase):
             f"❌ global stop was not reached: {msg_types}"
         )
         self.assertFalse(
-            any(_matches_intent(t, self.SKILL_ID, "StopLaughing") for t in msg_types),
+            any(_matches_intent(t, self.SKILL_ID, "stop_laughing") for t in msg_types),
             f"❌ bare 'stop' was shadowed by the laugh skill's own intent: {msg_types}"
         )
 
-        # even with only the skill's own adapt intent
-        # in the pipeline (no stop-pipeline plugin to win on priority), a
-        # bare "stop" still must not match "StopLaughing" - it requires
-        # both the "stop" and "laugh" vocabs, and "stop" alone has no
-        # "laugh" in it
-        adapt_only_msg_types = self._run("stop", ["ovos-adapt-pipeline-plugin-high"])
+        # even with only the skill's own intent pipelines (no stop-pipeline
+        # plugin to win on priority), a bare "stop" still must not match
+        # "stop_laughing": every sample names the laughing
+        intent_only_msg_types = self._run("stop", self.INTENT_PIPELINE)
         self.assertFalse(
-            any(_matches_intent(t, self.SKILL_ID, "StopLaughing") for t in adapt_only_msg_types),
-            f"❌ 'StopLaughing' requires only the 'Stop' vocab, no 'Laugh': {adapt_only_msg_types}"
+            any(_matches_intent(t, self.SKILL_ID, "stop_laughing") for t in intent_only_msg_types),
+            f"❌ bare 'stop' matched 'stop_laughing': {intent_only_msg_types}"
         )
 
     def test_stop_halts_laugh(self):
         # "stop laughing" is the laugh skill's dedicated stop phrase; it
         # must halt an in-progress random laugh and speak a confirmation
         session = Session("123")
-        session.pipeline = ["ovos-adapt-pipeline-plugin-high"]
+        session.pipeline = self.INTENT_PIPELINE
         start = Message("recognizer_loop:utterance",
                         {"utterances": ["random laugh"], "lang": "en-US"},
                         {"session": session.serialize()})
@@ -214,10 +216,10 @@ class TestStopWithLaughSkill(TestCase):
             test_message_number=False,
         ).execute()
 
-        msg_types = self._run("stop laughing", ["ovos-adapt-pipeline-plugin-high"])
+        msg_types = self._run("stop laughing", self.INTENT_PIPELINE)
 
         self.assertTrue(
-            any(_matches_intent(t, self.SKILL_ID, "StopLaughing") for t in msg_types),
+            any(_matches_intent(t, self.SKILL_ID, "stop_laughing") for t in msg_types),
             f"❌ 'stop laughing' did not route to the laugh skill's stop intent: {msg_types}"
         )
         self.assertTrue(
