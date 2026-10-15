@@ -117,8 +117,41 @@ class TestLaughIntentsEnUS(unittest.TestCase):
         self._assert_intent("are you haunted", "haunted.intent")
 
     def test_stop_laughing(self):
-        # adapt intent (require Stop + Laugh); handler speaks a dialog
-        self._assert_intent("stop laughing", "StopLaughing")
+        # padatious intent; handler speaks a dialog
+        self._assert_intent("stop laughing", "stop_laughing.intent")
+
+    def test_cancel_laughing(self):
+        self._assert_intent("cancel laughing", "stop_laughing.intent")
+
+    def test_abort_laugh(self):
+        self._assert_intent("abort laugh", "stop_laughing.intent")
+
+    def test_stop_random_laughing(self):
+        self._assert_intent("stop the random laughing", "stop_laughing.intent")
+
+    def test_stopping_you_from_laughing_is_a_laugh_request(self):
+        # sibling confusion: a laugh.intent sample that contains "stop" and
+        # "laughing" must stay with laugh.intent
+        self._assert_intent("what's stopping you from laughing", "laugh.intent",
+                            expect_speak=False)
+
+    def test_stop_alone_does_not_match_stop_laughing(self):
+        # sibling confusion: bare "stop" belongs to the stop pipeline, not
+        # this skill's stop_laughing intent
+        types = self._run("stop")
+        self.assertFalse(
+            any(_matches_intent(t, SKILL_ID, "stop_laughing.intent") for t in types),
+            f"bare 'stop' unexpectedly matched stop_laughing.intent ({types})",
+        )
+
+    def test_laugh_does_not_match_stop_laughing(self):
+        # sibling confusion: plain laugh request must route to laugh.intent,
+        # not stop_laughing.intent
+        types = self._run("can you laugh")
+        self.assertFalse(
+            any(_matches_intent(t, SKILL_ID, "stop_laughing.intent") for t in types),
+            f"'can you laugh' unexpectedly matched stop_laughing.intent ({types})",
+        )
 
 
 if __name__ == "__main__":
