@@ -1,5 +1,29 @@
 # Changelog
 
+## [2.0.0a6](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/2.0.0a6) (2026-10-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/2.0.0a5...2.0.0a6)
+
+**Merged pull requests:**
+
+- translate\(kab\): update haunted.intent [\#139](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/139) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
+## [2.0.0a5](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/2.0.0a5) (2026-10-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/2.0.0a4...2.0.0a5)
+
+**Merged pull requests:**
+
+- translate\(kab\): update cancel\_fail.dialog [\#138](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/138) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
+## [2.0.0a4](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/2.0.0a4) (2026-10-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/2.0.0a3...2.0.0a4)
+
+**Merged pull requests:**
+
+- translate\(kab\): update Stop.voc [\#137](https://github.com/OpenVoiceOS/ovos-skill-laugh/pull/137) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [2.0.0a3](https://github.com/OpenVoiceOS/ovos-skill-laugh/tree/2.0.0a3) (2026-10-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-laugh/compare/2.0.0a2...2.0.0a3)
